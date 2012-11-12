@@ -7,19 +7,28 @@
 //
 
 #import "AppDelegate.h"
+#import "FunctionViewController.h"
+#import "ERTabBarController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 
+@synthesize tabBarController,_navigationController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    tabBarController = [[ERTabBarController alloc] init];
+    _navigationController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
+    _navigationController.navigationBarHidden =YES;
+    [self.window addSubview:_navigationController.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

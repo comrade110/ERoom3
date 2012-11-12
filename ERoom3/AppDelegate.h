@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ERTabBarController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,UITabBarControllerDelegate>{
+
+    ERTabBarController *tabBarController;
+    NSMutableArray *array;
+    UINavigationController *_navigationController;
+}
+
+
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UINavigationController *_navigationController;
+@property (strong, nonatomic) ERTabBarController *tabBarController;
 
 @end

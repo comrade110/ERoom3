@@ -15,11 +15,11 @@
     UILabel *label;
     
     CGPoint startPoint;
+    NSString *ip;
     
     BOOL isTouchSV;
     
     UIScrollView *sv ;
-    
     int suoyin;
     
     int seqcount;

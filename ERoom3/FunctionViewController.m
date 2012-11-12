@@ -11,6 +11,7 @@
 #import <SDwebImage/UIButton+WebCache.h>
 #import "PageViewController.h"
 #import "NewsViewController.h"
+#import "SVModalWebViewController.h"
 
 #define FUNCIMG_WIDTH  150
 #define FUNCIMG_HEIGHT 200
@@ -37,7 +38,7 @@
         seqcount = [index intValue]; 
         
         funcArr = [ERConfiger shareERConfiger].configArr;
-        NSString *ip = [ERConfiger shareERConfiger].ip;
+        ip = [ERConfiger shareERConfiger].ip;
         if (self.funcArr) {
             funcIcons = [[[funcArr objectAtIndex:[index intValue]] objectForKey:@"menu"] objectForKey:@"func"];
             if (funcIcons&&ip) {
@@ -143,7 +144,6 @@
     CGPoint currentPoint =[touch locationInView:self.view];
     if (CGRectContainsPoint(sv.frame, currentPoint))
     {
-        NSLog(@"lalal");
         isTouchSV = YES;
         startPoint = currentPoint;
     }
@@ -193,6 +193,12 @@
         
         [self.navigationController pushViewController:pvc animated:YES];    
     }else if (selType == 2) {
+         NSString *target = [[funcIcons objectAtIndex:(btn.tag-1)] objectForKey:@"target"];
+        NSString *urlstring = [NSString stringWithFormat:@"http://%@%@",ip,target];
+        SVModalWebViewController *svWebView = [[SVModalWebViewController alloc] initWithAddress:urlstring];
+        
+        [self.navigationController presentModalViewController:svWebView animated:YES];  
+        
         
     }else if (selType == 3) {
         NSString *checkTarget = [[funcIcons objectAtIndex:(btn.tag-1)] objectForKey:@"target"];

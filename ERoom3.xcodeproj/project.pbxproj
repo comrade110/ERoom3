@@ -86,6 +86,10 @@
 		CE7F02FD1650A28E00B444A9 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7F02F51650A28E00B444A9 /* blackArrow@2x.png */; };
 		CE7F02FE1650A28E00B444A9 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7F02F61650A28E00B444A9 /* blueArrow.png */; };
 		CE7F02FF1650A28E00B444A9 /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7F02F71650A28E00B444A9 /* blueArrow@2x.png */; };
+		CE7F030D1650E05100B444A9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7F030C1650E05100B444A9 /* MessageUI.framework */; };
+		CE7F03141650E0EC00B444A9 /* SVModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7F03101650E0EC00B444A9 /* SVModalWebViewController.m */; };
+		CE7F03151650E0EC00B444A9 /* SVWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE7F03111650E0EC00B444A9 /* SVWebViewController.bundle */; };
+		CE7F03161650E0EC00B444A9 /* SVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7F03131650E0EC00B444A9 /* SVWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -229,6 +233,12 @@
 		CE7F02F51650A28E00B444A9 /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
 		CE7F02F61650A28E00B444A9 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
 		CE7F02F71650A28E00B444A9 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		CE7F030C1650E05100B444A9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		CE7F030F1650E0EC00B444A9 /* SVModalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVModalWebViewController.h; sourceTree = "<group>"; };
+		CE7F03101650E0EC00B444A9 /* SVModalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVModalWebViewController.m; sourceTree = "<group>"; };
+		CE7F03111650E0EC00B444A9 /* SVWebViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVWebViewController.bundle; sourceTree = "<group>"; };
+		CE7F03121650E0EC00B444A9 /* SVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewController.h; sourceTree = "<group>"; };
+		CE7F03131650E0EC00B444A9 /* SVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7F030D1650E05100B444A9 /* MessageUI.framework in Frameworks */,
 				CE7B7BBD164A25C800C33ABE /* QuartzCore.framework in Frameworks */,
 				CE7A524C1640FB6700FF406B /* ImageIO.framework in Frameworks */,
 				CE7C0225163FAB20001657B0 /* libxml2.dylib in Frameworks */,
@@ -267,6 +278,7 @@
 		CE7C0168163F7DF0001657B0 = {
 			isa = PBXGroup;
 			children = (
+				CE7F030C1650E05100B444A9 /* MessageUI.framework */,
 				CE7B7BBC164A25C800C33ABE /* QuartzCore.framework */,
 				CE7A524B1640FB6700FF406B /* ImageIO.framework */,
 				CE7A52491640FA9600FF406B /* SDWebImage.framework */,
@@ -304,6 +316,7 @@
 				CE7C01F2163FA69E001657B0 /* TouchXML */,
 				CE7C01C9163FA692001657B0 /* Soap */,
 				CE7C01A1163FA653001657B0 /* Generated */,
+				CE7F030E1650E0EC00B444A9 /* SVWebViewController */,
 				CE7C0186163F7DF0001657B0 /* AppDelegate.h */,
 				CE7C0187163F7DF0001657B0 /* AppDelegate.m */,
 				CE7A520D1640C57900FF406B /* SOAPXMlParse.h */,
@@ -468,6 +481,18 @@
 			path = TouchXML;
 			sourceTree = "<group>";
 		};
+		CE7F030E1650E0EC00B444A9 /* SVWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F030F1650E0EC00B444A9 /* SVModalWebViewController.h */,
+				CE7F03101650E0EC00B444A9 /* SVModalWebViewController.m */,
+				CE7F03111650E0EC00B444A9 /* SVWebViewController.bundle */,
+				CE7F03121650E0EC00B444A9 /* SVWebViewController.h */,
+				CE7F03131650E0EC00B444A9 /* SVWebViewController.m */,
+			);
+			path = SVWebViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -536,6 +561,7 @@
 				CE7F02FD1650A28E00B444A9 /* blackArrow@2x.png in Resources */,
 				CE7F02FE1650A28E00B444A9 /* blueArrow.png in Resources */,
 				CE7F02FF1650A28E00B444A9 /* blueArrow@2x.png in Resources */,
+				CE7F03151650E0EC00B444A9 /* SVWebViewController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +642,8 @@
 				CE7A2056164BA04900F991DA /* NewsViewController.m in Sources */,
 				CE7E08C016508EDE000AC3B5 /* URLUILabel.m in Sources */,
 				CE7E08C416509342000AC3B5 /* EGORefreshTableHeaderView.m in Sources */,
+				CE7F03141650E0EC00B444A9 /* SVModalWebViewController.m in Sources */,
+				CE7F03161650E0EC00B444A9 /* SVWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

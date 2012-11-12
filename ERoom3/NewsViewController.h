@@ -11,6 +11,7 @@
 #import "SOAPXMlParse.h"
 #import "EGORefreshTableHeaderView.h"
 #import "URLUILabel.h"
+#import "SVWebViewController.h"
 
 @interface NewsViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,EGORefreshTableHeaderDelegate,UIScrollViewDelegate,URLLabelDelegate>{
 

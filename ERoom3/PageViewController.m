@@ -91,7 +91,6 @@
 -(void)viewWillAppear:(BOOL)animated{
     
     self.navigationController.navigationBarHidden = NO;
-    self.navigationController.navigationBar.alpha = 0.5;
     
 }
 -(void)viewWillDisappear:(BOOL)animated{

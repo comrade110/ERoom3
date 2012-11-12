@@ -158,14 +158,17 @@
     [ERConfiger shareERConfiger].configArr = tempArr;
     [ERConfiger shareERConfiger].ip = ip;
     
+    CGRect rect =[[UIScreen mainScreen] bounds];
     
-    for (int i=0; i<[tempArr count]; i++) {
+    int btnCount = [tempArr count];
+    
+    for (int i=0; i<btnCount; i++) {
         
         NSDictionary *tempDic = [[tempArr objectAtIndex:i] objectForKey:@"menu"];
         
         UIButton *menuBtns = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        menuBtns.frame = CGRectMake(i*90+213, 10, 85, 85);
+        menuBtns.frame = CGRectMake(rect.size.width-(100*btnCount)+i*100, 10, 85, 85);
 
         
         menuBtns.tag = 10+i;

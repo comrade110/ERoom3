@@ -9,10 +9,8 @@
 #import "NewsViewController.h"
 
 #define PER_PAGE_NUM 10
+#define TABLE_HEIGHT 70
 
-@interface NewsViewController ()
-
-@end
 
 @implementation NewsViewController
 
@@ -32,7 +30,7 @@
         NSArray *tempArr = [ERConfiger shareERConfiger].configArr;
         
         linkArr = [[NSMutableArray alloc] init];
-        curCount = 0;
+        curCount = 10;
         if (tempArr) {
             newsArr = [[[tempArr objectAtIndex:seq] objectForKey:@"menu"] objectForKey:@"func"];
             
@@ -80,19 +78,9 @@
     SOAPXMlParse *sxp = [[SOAPXMlParse alloc] init];    
     newsArr= [sxp parseRoot:document nodeName:@"//item"];
     if (newsArr) {        
-        NSRange range = NSMakeRange(curCount, PER_PAGE_NUM);
+        NSRange range = NSMakeRange(0, curCount);
         perPageArr = [newsArr subarrayWithRange:range];
     }
-    int count=[perPageArr count];
-    
-	
-	if(52*count>364)
-	{
-		tableView.contentSize=CGSizeMake(1024, 52*count);
-		_refreshHeaderView.frame=CGRectMake(0, tableView.contentSize.height, 1024, 480);
-		
-	}
-    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
     [tableView reloadData];
 }
 
@@ -114,7 +102,6 @@
 -(void)viewWillAppear:(BOOL)animated{
     
     self.navigationController.navigationBarHidden = NO;
-    self.navigationController.navigationBar.alpha = 0.5;
     
 }
 -(void)viewWillDisappear:(BOOL)animated{
@@ -125,7 +112,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 52.0;
+    return TABLE_HEIGHT;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -137,6 +124,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    
     return [perPageArr count];
 }
 
@@ -156,13 +144,37 @@
         } 
     } 
     NSString *title = [tempDic objectForKey:@"title"];
+    NSString *desc = [tempDic objectForKey:@"description"];
     NSString *link = [tempDic objectForKey:@"link"];
+    NSString *source = [tempDic objectForKey:@"source"];
+    
+    if ([desc hasPrefix:@"<a"]) {
+        
+       NSArray* tarr = [desc componentsSeparatedByString:@"<br>"];
+        if (tarr) {
+            desc = [tarr objectAtIndex:1];
+        }
+    }
+    
+    
     [linkArr addObject:link];
-    URLUILabel *titleL = [[URLUILabel alloc] initWithFrame:CGRectMake(10, 10, 900, 30)];
-    titleL.delegate = self;
+    UILabel *titleL = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, 950, 20)];
+    UILabel *descL = [[UILabel alloc] init];
+    titleL.font = [UIFont boldSystemFontOfSize:16];
     titleL.text = title;
     titleL.tag = indexPath.row+10;
+    descL.text = [NSString stringWithFormat:@"%@ 【%@】",desc,source];
+    descL.font = [UIFont systemFontOfSize:11] ;
+    descL.numberOfLines = 0;
+    descL.lineBreakMode = UILineBreakModeCharacterWrap;
+    CGSize size = CGSizeMake(900,40);
+    CGSize descSize = [desc sizeWithFont:[UIFont systemFontOfSize:11] 
+                       constrainedToSize:size 
+                           lineBreakMode:UILineBreakModeWordWrap
+                       ];  
+    descL.frame = CGRectMake(20, 30, 950, descSize.height);
     [cell.contentView addSubview:titleL];
+    [cell.contentView addSubview:descL];
     return cell;
 }
 
@@ -179,22 +191,41 @@
 	//put here just for demo
 	_reloading = YES;
     
-    curCount+=10;
+    perPageArr = nil;
     
-    perPageArr = [newsArr subarrayWithRange:NSMakeRange(curCount, PER_PAGE_NUM)];
+    if (curCount>50) {
+        curCount = 49;
+        _reloading = NO;
+        [_refreshHeaderView removeFromSuperview];
+        return;
+    }else {
+        curCount+=PER_PAGE_NUM;
+    }
     
-    [tableView reloadData];
+    perPageArr = nil;
+    
+    perPageArr = [newsArr subarrayWithRange:NSMakeRange(0, curCount)];
+    
+    int count=[perPageArr count];
+    
+	
     NSLog(@"当前数组元素个数为：%d",[perPageArr count]);
+    
+	if(TABLE_HEIGHT*count>700)
+	{
+		tableView.contentSize=CGSizeMake(1024, TABLE_HEIGHT*count);
+		_refreshHeaderView.frame=CGRectMake(0, tableView.contentSize.height, 1024, 700);
+		
+	}
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
+    [tableView reloadData];
+
 	//打开线程，读取网络图片
     //        [NSThread detachNewThreadSelector:@selector(requestImage) toTarget:self withObject:nil];
     
     
 }
 
-//-(void)dosomething
-//{
-//	
-//}
 
 
 //此方法是结束读取数据
@@ -205,6 +236,14 @@
 	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:tableView];
 	NSLog(@"end");
 	
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    if (linkArr) {
+        SVWebViewController *svWebView = [[SVWebViewController alloc] initWithAddress:[linkArr objectAtIndex:indexPath.row]];
+        [self.navigationController pushViewController:svWebView animated:YES];
+    }
+    
 }
 
 
@@ -219,13 +258,22 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
 	
-	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:tableView];
+	if (curCount<=49) {
+        [_refreshHeaderView egoRefreshScrollViewDidEndDragging:tableView];
+    }else {
+        [_refreshHeaderView removeFromSuperview];
+    }
 	
 }
 
 - (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
 	
-	[self reloadTableViewDataSource];
+    
+	if (curCount<=49) {
+        [self reloadTableViewDataSource];
+    }else {
+        [_refreshHeaderView removeFromSuperview];
+    }
 	//[self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0.5];
 	
 }

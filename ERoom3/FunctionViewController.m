@@ -12,6 +12,7 @@
 #import "PageViewController.h"
 #import "NewsViewController.h"
 #import "SVModalWebViewController.h"
+#import "NaviViewController.h"
 
 #define FUNCIMG_WIDTH  150
 #define FUNCIMG_HEIGHT 200
@@ -44,8 +45,6 @@
             if (funcIcons&&ip) {
                 
                 funcNum = [funcIcons count];
-                
-                
                 
                 sv = [[UIScrollView alloc] initWithFrame:CGRectMake(10, 245, 1024, 400)];
                 int svwidth =(funcNum+4)/5*1024;
@@ -206,6 +205,10 @@
             
             NewsViewController *nvc = [[NewsViewController alloc] initWithNewsSeq:seqcount andBtntag:btn.tag-1];
             [self.navigationController pushViewController:nvc animated:YES];  
+        }else if([checkTarget hasPrefix:@"module"]){
+            NaviViewController *navi = [[NaviViewController alloc] init];
+            navi.targetID = [checkTarget substringFromIndex:10];
+            [self.navigationController pushViewController:navi animated:YES];
         }
     }
 }

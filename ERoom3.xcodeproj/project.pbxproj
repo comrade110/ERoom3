@@ -78,6 +78,23 @@
 		CE7DF1111648E5E300B65994 /* sbox_backgroud.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7DF1101648E5E300B65994 /* sbox_backgroud.jpg */; };
 		CE7E08C016508EDE000AC3B5 /* URLUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E08BF16508EDE000AC3B5 /* URLUILabel.m */; };
 		CE7E08C416509342000AC3B5 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E08C316509342000AC3B5 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE7EA2F31651E83400E604D7 /* SDZArrayOfCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2D61651E83400E604D7 /* SDZArrayOfCatalog.m */; };
+		CE7EA2F41651E83400E604D7 /* SDZCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2D81651E83400E604D7 /* SDZCatalog.m */; };
+		CE7EA2F51651E83400E604D7 /* SDZCatalogGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2DA1651E83400E604D7 /* SDZCatalogGroup.m */; };
+		CE7EA2F61651E83400E604D7 /* SDZCatalogGroup2ArrayOfCatalogMap.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2DC1651E83400E604D7 /* SDZCatalogGroup2ArrayOfCatalogMap.m */; };
+		CE7EA2F71651E83400E604D7 /* SDZContent.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2DE1651E83400E604D7 /* SDZContent.m */; };
+		CE7EA2F81651E83400E604D7 /* SDZContentList.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2E01651E83400E604D7 /* SDZContentList.m */; };
+		CE7EA2F91651E83400E604D7 /* SDZContType.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2E21651E83400E604D7 /* SDZContType.m */; };
+		CE7EA2FA1651E83400E604D7 /* SDZContType2CatalogGroup2ArrayOfCatalogMapMap.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2E41651E83400E604D7 /* SDZContType2CatalogGroup2ArrayOfCatalogMapMap.m */; };
+		CE7EA2FB1651E83400E604D7 /* SDZContTypeField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2E61651E83400E604D7 /* SDZContTypeField.m */; };
+		CE7EA2FC1651E83400E604D7 /* SDZContTypeField2stringMap.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2E81651E83400E604D7 /* SDZContTypeField2stringMap.m */; };
+		CE7EA2FD1651E83400E604D7 /* SDZModule.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2EA1651E83400E604D7 /* SDZModule.m */; };
+		CE7EA2FE1651E83400E604D7 /* SDZModuleList.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2EC1651E83400E604D7 /* SDZModuleList.m */; };
+		CE7EA2FF1651E83400E604D7 /* SDZNavigationService.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2EE1651E83400E604D7 /* SDZNavigationService.m */; };
+		CE7EA3001651E83400E604D7 /* SDZRelation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2F01651E83400E604D7 /* SDZRelation.m */; };
+		CE7EA3011651E83400E604D7 /* SDZRelationList.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA2F21651E83400E604D7 /* SDZRelationList.m */; };
+		CE7EA3051651E9C800E604D7 /* NaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA3041651E9C800E604D7 /* NaviViewController.m */; };
+		CE7EA3081652216C00E604D7 /* SoapDict.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EA3071652216C00E604D7 /* SoapDict.m */; };
 		CE7F02F81650A28E00B444A9 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7F02F01650A28E00B444A9 /* whiteArrow.png */; };
 		CE7F02F91650A28E00B444A9 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7F02F11650A28E00B444A9 /* whiteArrow@2x.png */; };
 		CE7F02FA1650A28E00B444A9 /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7F02F21650A28E00B444A9 /* grayArrow.png */; };
@@ -224,6 +241,40 @@
 		CE7E08BF16508EDE000AC3B5 /* URLUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLUILabel.m; sourceTree = "<group>"; };
 		CE7E08C216509342000AC3B5 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		CE7E08C316509342000AC3B5 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		CE7EA2D51651E83400E604D7 /* SDZArrayOfCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZArrayOfCatalog.h; sourceTree = "<group>"; };
+		CE7EA2D61651E83400E604D7 /* SDZArrayOfCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZArrayOfCatalog.m; sourceTree = "<group>"; };
+		CE7EA2D71651E83400E604D7 /* SDZCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZCatalog.h; sourceTree = "<group>"; };
+		CE7EA2D81651E83400E604D7 /* SDZCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZCatalog.m; sourceTree = "<group>"; };
+		CE7EA2D91651E83400E604D7 /* SDZCatalogGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZCatalogGroup.h; sourceTree = "<group>"; };
+		CE7EA2DA1651E83400E604D7 /* SDZCatalogGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZCatalogGroup.m; sourceTree = "<group>"; };
+		CE7EA2DB1651E83400E604D7 /* SDZCatalogGroup2ArrayOfCatalogMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZCatalogGroup2ArrayOfCatalogMap.h; sourceTree = "<group>"; };
+		CE7EA2DC1651E83400E604D7 /* SDZCatalogGroup2ArrayOfCatalogMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZCatalogGroup2ArrayOfCatalogMap.m; sourceTree = "<group>"; };
+		CE7EA2DD1651E83400E604D7 /* SDZContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZContent.h; sourceTree = "<group>"; };
+		CE7EA2DE1651E83400E604D7 /* SDZContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZContent.m; sourceTree = "<group>"; };
+		CE7EA2DF1651E83400E604D7 /* SDZContentList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZContentList.h; sourceTree = "<group>"; };
+		CE7EA2E01651E83400E604D7 /* SDZContentList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZContentList.m; sourceTree = "<group>"; };
+		CE7EA2E11651E83400E604D7 /* SDZContType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZContType.h; sourceTree = "<group>"; };
+		CE7EA2E21651E83400E604D7 /* SDZContType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZContType.m; sourceTree = "<group>"; };
+		CE7EA2E31651E83400E604D7 /* SDZContType2CatalogGroup2ArrayOfCatalogMapMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZContType2CatalogGroup2ArrayOfCatalogMapMap.h; sourceTree = "<group>"; };
+		CE7EA2E41651E83400E604D7 /* SDZContType2CatalogGroup2ArrayOfCatalogMapMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZContType2CatalogGroup2ArrayOfCatalogMapMap.m; sourceTree = "<group>"; };
+		CE7EA2E51651E83400E604D7 /* SDZContTypeField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZContTypeField.h; sourceTree = "<group>"; };
+		CE7EA2E61651E83400E604D7 /* SDZContTypeField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZContTypeField.m; sourceTree = "<group>"; };
+		CE7EA2E71651E83400E604D7 /* SDZContTypeField2stringMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZContTypeField2stringMap.h; sourceTree = "<group>"; };
+		CE7EA2E81651E83400E604D7 /* SDZContTypeField2stringMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZContTypeField2stringMap.m; sourceTree = "<group>"; };
+		CE7EA2E91651E83400E604D7 /* SDZModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZModule.h; sourceTree = "<group>"; };
+		CE7EA2EA1651E83400E604D7 /* SDZModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZModule.m; sourceTree = "<group>"; };
+		CE7EA2EB1651E83400E604D7 /* SDZModuleList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZModuleList.h; sourceTree = "<group>"; };
+		CE7EA2EC1651E83400E604D7 /* SDZModuleList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZModuleList.m; sourceTree = "<group>"; };
+		CE7EA2ED1651E83400E604D7 /* SDZNavigationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZNavigationService.h; sourceTree = "<group>"; };
+		CE7EA2EE1651E83400E604D7 /* SDZNavigationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZNavigationService.m; sourceTree = "<group>"; };
+		CE7EA2EF1651E83400E604D7 /* SDZRelation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZRelation.h; sourceTree = "<group>"; };
+		CE7EA2F01651E83400E604D7 /* SDZRelation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZRelation.m; sourceTree = "<group>"; };
+		CE7EA2F11651E83400E604D7 /* SDZRelationList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZRelationList.h; sourceTree = "<group>"; };
+		CE7EA2F21651E83400E604D7 /* SDZRelationList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZRelationList.m; sourceTree = "<group>"; };
+		CE7EA3031651E9C800E604D7 /* NaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviViewController.h; sourceTree = "<group>"; };
+		CE7EA3041651E9C800E604D7 /* NaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviViewController.m; sourceTree = "<group>"; };
+		CE7EA3061652216C00E604D7 /* SoapDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapDict.h; sourceTree = "<group>"; };
+		CE7EA3071652216C00E604D7 /* SoapDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapDict.m; sourceTree = "<group>"; };
 		CE7F02EE1650A12700B444A9 /* URLLableDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLLableDelegate.h; sourceTree = "<group>"; };
 		CE7F02F01650A28E00B444A9 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		CE7F02F11650A28E00B444A9 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
@@ -337,6 +388,8 @@
 				CE7B7BAE164A067200C33ABE /* PageViewController.m */,
 				CE7A2054164BA04900F991DA /* NewsViewController.h */,
 				CE7A2055164BA04900F991DA /* NewsViewController.m */,
+				CE7EA3031651E9C800E604D7 /* NaviViewController.h */,
+				CE7EA3041651E9C800E604D7 /* NaviViewController.m */,
 				CE7F02EE1650A12700B444A9 /* URLLableDelegate.h */,
 				CE7E08BE16508EDE000AC3B5 /* URLUILabel.h */,
 				CE7E08BF16508EDE000AC3B5 /* URLUILabel.m */,
@@ -383,32 +436,8 @@
 		CE7C01A1163FA653001657B0 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				CE7C01A2163FA653001657B0 /* SDZEverydayNewest.h */,
-				CE7C01A3163FA653001657B0 /* SDZEverydayNewest.m */,
-				CE7C01A4163FA653001657B0 /* SDZfindEverydayNewestList.h */,
-				CE7C01A5163FA653001657B0 /* SDZfindEverydayNewestList.m */,
-				CE7C01A6163FA653001657B0 /* SDZFunctionService.h */,
-				CE7C01A7163FA653001657B0 /* SDZFunctionService.m */,
-				CE7C01A8163FA653001657B0 /* SDZGame.h */,
-				CE7C01A9163FA653001657B0 /* SDZGame.m */,
-				CE7C01AA163FA653001657B0 /* SDZgameList.h */,
-				CE7C01AB163FA653001657B0 /* SDZgameList.m */,
-				CE7C01AC163FA653001657B0 /* SDZint2stringMap.h */,
-				CE7C01AD163FA653001657B0 /* SDZint2stringMap.m */,
-				CE7C01AE163FA653001657B0 /* SDZMusic.h */,
-				CE7C01AF163FA653001657B0 /* SDZMusic.m */,
-				CE7C01B0163FA653001657B0 /* SDZmusicList.h */,
-				CE7C01B1163FA653001657B0 /* SDZmusicList.m */,
-				CE7C01B2163FA653001657B0 /* SDZnewGameList.h */,
-				CE7C01B3163FA653001657B0 /* SDZnewGameList.m */,
-				CE7C01B4163FA653001657B0 /* SDZRoom.h */,
-				CE7C01B5163FA653001657B0 /* SDZRoom.m */,
-				CE7C01B6163FA653001657B0 /* SDZServices.h */,
-				CE7C01B7163FA653001657B0 /* SDZServices.m */,
-				CE7C01B8163FA653001657B0 /* SDZUser.h */,
-				CE7C01B9163FA653001657B0 /* SDZUser.m */,
-				CE7C01BA163FA653001657B0 /* Soap+Prefix.h */,
-				CE7C01BB163FA653001657B0 /* Soap+Prefix.m */,
+				CE7EA2D01651E63A00E604D7 /* NavigationService */,
+				CE7EA2CE1651E5D400E604D7 /* FunctionService */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -443,6 +472,8 @@
 				CE7C01E2163FA692001657B0 /* SoapRequest.m */,
 				CE7C01E3163FA692001657B0 /* SoapService.h */,
 				CE7C01E4163FA692001657B0 /* SoapService.m */,
+				CE7EA3061652216C00E604D7 /* SoapDict.h */,
+				CE7EA3071652216C00E604D7 /* SoapDict.m */,
 			);
 			path = Soap;
 			sourceTree = "<group>";
@@ -479,6 +510,76 @@
 				CE7C020D163FA69E001657B0 /* TouchXML.h */,
 			);
 			path = TouchXML;
+			sourceTree = "<group>";
+		};
+		CE7EA2CE1651E5D400E604D7 /* FunctionService */ = {
+			isa = PBXGroup;
+			children = (
+				CE7C01A2163FA653001657B0 /* SDZEverydayNewest.h */,
+				CE7C01A3163FA653001657B0 /* SDZEverydayNewest.m */,
+				CE7C01A4163FA653001657B0 /* SDZfindEverydayNewestList.h */,
+				CE7C01A5163FA653001657B0 /* SDZfindEverydayNewestList.m */,
+				CE7C01A6163FA653001657B0 /* SDZFunctionService.h */,
+				CE7C01A7163FA653001657B0 /* SDZFunctionService.m */,
+				CE7C01A8163FA653001657B0 /* SDZGame.h */,
+				CE7C01A9163FA653001657B0 /* SDZGame.m */,
+				CE7C01AA163FA653001657B0 /* SDZgameList.h */,
+				CE7C01AB163FA653001657B0 /* SDZgameList.m */,
+				CE7C01AC163FA653001657B0 /* SDZint2stringMap.h */,
+				CE7C01AD163FA653001657B0 /* SDZint2stringMap.m */,
+				CE7C01AE163FA653001657B0 /* SDZMusic.h */,
+				CE7C01AF163FA653001657B0 /* SDZMusic.m */,
+				CE7C01B0163FA653001657B0 /* SDZmusicList.h */,
+				CE7C01B1163FA653001657B0 /* SDZmusicList.m */,
+				CE7C01B2163FA653001657B0 /* SDZnewGameList.h */,
+				CE7C01B3163FA653001657B0 /* SDZnewGameList.m */,
+				CE7C01B4163FA653001657B0 /* SDZRoom.h */,
+				CE7C01B5163FA653001657B0 /* SDZRoom.m */,
+				CE7C01B6163FA653001657B0 /* SDZServices.h */,
+				CE7C01B7163FA653001657B0 /* SDZServices.m */,
+				CE7C01B8163FA653001657B0 /* SDZUser.h */,
+				CE7C01B9163FA653001657B0 /* SDZUser.m */,
+				CE7C01BA163FA653001657B0 /* Soap+Prefix.h */,
+				CE7C01BB163FA653001657B0 /* Soap+Prefix.m */,
+			);
+			name = FunctionService;
+			sourceTree = "<group>";
+		};
+		CE7EA2D01651E63A00E604D7 /* NavigationService */ = {
+			isa = PBXGroup;
+			children = (
+				CE7EA2D51651E83400E604D7 /* SDZArrayOfCatalog.h */,
+				CE7EA2D61651E83400E604D7 /* SDZArrayOfCatalog.m */,
+				CE7EA2D71651E83400E604D7 /* SDZCatalog.h */,
+				CE7EA2D81651E83400E604D7 /* SDZCatalog.m */,
+				CE7EA2D91651E83400E604D7 /* SDZCatalogGroup.h */,
+				CE7EA2DA1651E83400E604D7 /* SDZCatalogGroup.m */,
+				CE7EA2DB1651E83400E604D7 /* SDZCatalogGroup2ArrayOfCatalogMap.h */,
+				CE7EA2DC1651E83400E604D7 /* SDZCatalogGroup2ArrayOfCatalogMap.m */,
+				CE7EA2DD1651E83400E604D7 /* SDZContent.h */,
+				CE7EA2DE1651E83400E604D7 /* SDZContent.m */,
+				CE7EA2DF1651E83400E604D7 /* SDZContentList.h */,
+				CE7EA2E01651E83400E604D7 /* SDZContentList.m */,
+				CE7EA2E11651E83400E604D7 /* SDZContType.h */,
+				CE7EA2E21651E83400E604D7 /* SDZContType.m */,
+				CE7EA2E31651E83400E604D7 /* SDZContType2CatalogGroup2ArrayOfCatalogMapMap.h */,
+				CE7EA2E41651E83400E604D7 /* SDZContType2CatalogGroup2ArrayOfCatalogMapMap.m */,
+				CE7EA2E51651E83400E604D7 /* SDZContTypeField.h */,
+				CE7EA2E61651E83400E604D7 /* SDZContTypeField.m */,
+				CE7EA2E71651E83400E604D7 /* SDZContTypeField2stringMap.h */,
+				CE7EA2E81651E83400E604D7 /* SDZContTypeField2stringMap.m */,
+				CE7EA2E91651E83400E604D7 /* SDZModule.h */,
+				CE7EA2EA1651E83400E604D7 /* SDZModule.m */,
+				CE7EA2EB1651E83400E604D7 /* SDZModuleList.h */,
+				CE7EA2EC1651E83400E604D7 /* SDZModuleList.m */,
+				CE7EA2ED1651E83400E604D7 /* SDZNavigationService.h */,
+				CE7EA2EE1651E83400E604D7 /* SDZNavigationService.m */,
+				CE7EA2EF1651E83400E604D7 /* SDZRelation.h */,
+				CE7EA2F01651E83400E604D7 /* SDZRelation.m */,
+				CE7EA2F11651E83400E604D7 /* SDZRelationList.h */,
+				CE7EA2F21651E83400E604D7 /* SDZRelationList.m */,
+			);
+			name = NavigationService;
 			sourceTree = "<group>";
 		};
 		CE7F030E1650E0EC00B444A9 /* SVWebViewController */ = {
@@ -644,6 +745,23 @@
 				CE7E08C416509342000AC3B5 /* EGORefreshTableHeaderView.m in Sources */,
 				CE7F03141650E0EC00B444A9 /* SVModalWebViewController.m in Sources */,
 				CE7F03161650E0EC00B444A9 /* SVWebViewController.m in Sources */,
+				CE7EA2F31651E83400E604D7 /* SDZArrayOfCatalog.m in Sources */,
+				CE7EA2F41651E83400E604D7 /* SDZCatalog.m in Sources */,
+				CE7EA2F51651E83400E604D7 /* SDZCatalogGroup.m in Sources */,
+				CE7EA2F61651E83400E604D7 /* SDZCatalogGroup2ArrayOfCatalogMap.m in Sources */,
+				CE7EA2F71651E83400E604D7 /* SDZContent.m in Sources */,
+				CE7EA2F81651E83400E604D7 /* SDZContentList.m in Sources */,
+				CE7EA2F91651E83400E604D7 /* SDZContType.m in Sources */,
+				CE7EA2FA1651E83400E604D7 /* SDZContType2CatalogGroup2ArrayOfCatalogMapMap.m in Sources */,
+				CE7EA2FB1651E83400E604D7 /* SDZContTypeField.m in Sources */,
+				CE7EA2FC1651E83400E604D7 /* SDZContTypeField2stringMap.m in Sources */,
+				CE7EA2FD1651E83400E604D7 /* SDZModule.m in Sources */,
+				CE7EA2FE1651E83400E604D7 /* SDZModuleList.m in Sources */,
+				CE7EA2FF1651E83400E604D7 /* SDZNavigationService.m in Sources */,
+				CE7EA3001651E83400E604D7 /* SDZRelation.m in Sources */,
+				CE7EA3011651E83400E604D7 /* SDZRelationList.m in Sources */,
+				CE7EA3051651E9C800E604D7 /* NaviViewController.m in Sources */,
+				CE7EA3081652216C00E604D7 /* SoapDict.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

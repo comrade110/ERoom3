@@ -13,6 +13,8 @@
 @synthesize configArr;
 
 static SDZFunctionService *server = nil;
+static SDZNavigationService *navServer = nil;
+
 +(SDZFunctionService *)sharedService{
     
     @synchronized(self){
@@ -21,6 +23,15 @@ static SDZFunctionService *server = nil;
         }
     }
     return server;
+}
++(SDZNavigationService *)shareNavService{
+    
+    @synchronized(self){
+        if (navServer == nil) {
+            navServer = [SDZNavigationService service];
+        }
+    }
+    return navServer;
 }
 
 

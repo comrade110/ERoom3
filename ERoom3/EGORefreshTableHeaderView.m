@@ -5,7 +5,7 @@
 //
 
 
-#define  RefreshViewHight 65.0f
+#define  RefreshViewHight 70.0f
 
 #import "EGORefreshTableHeaderView.h"
 

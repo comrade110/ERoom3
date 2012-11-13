@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SDZFunctionService.h"
+#import "SDZNavigationService.h"
 
 
 
@@ -16,4 +17,5 @@
 @property(nonatomic,retain) NSArray *configArr;
 
 +(SDZFunctionService *)sharedService;
++(SDZNavigationService *)shareNavService;
 @end

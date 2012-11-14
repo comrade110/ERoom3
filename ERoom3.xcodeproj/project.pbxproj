@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE5044AE16537A2A00FBD798 /* cityw_daohangt.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5044A916537A2A00FBD798 /* cityw_daohangt.png */; };
+		CE5044AF16537A2A00FBD798 /* cityw_hhk.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5044AA16537A2A00FBD798 /* cityw_hhk.png */; };
+		CE5044B016537A2A00FBD798 /* cityw_shk.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5044AB16537A2A00FBD798 /* cityw_shk.png */; };
+		CE5044B116537A2A00FBD798 /* cityw_title.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5044AC16537A2A00FBD798 /* cityw_title.png */; };
+		CE5044B416538EE100FBD798 /* CityTypeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5044B316538EE000FBD798 /* CityTypeScrollView.m */; };
 		CE779A981642125300CC7990 /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = CE779A971642125300CC7990 /* sad.png */; };
 		CE779A9C164226EC00CC7990 /* FunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE779A9B164226EC00CC7990 /* FunctionViewController.m */; };
 		CE7A2056164BA04900F991DA /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2055164BA04900F991DA /* NewsViewController.m */; };
@@ -110,6 +115,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE5044A916537A2A00FBD798 /* cityw_daohangt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cityw_daohangt.png; sourceTree = "<group>"; };
+		CE5044AA16537A2A00FBD798 /* cityw_hhk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cityw_hhk.png; sourceTree = "<group>"; };
+		CE5044AB16537A2A00FBD798 /* cityw_shk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cityw_shk.png; sourceTree = "<group>"; };
+		CE5044AC16537A2A00FBD798 /* cityw_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cityw_title.png; sourceTree = "<group>"; };
+		CE5044B216538EE000FBD798 /* CityTypeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTypeScrollView.h; sourceTree = "<group>"; };
+		CE5044B316538EE000FBD798 /* CityTypeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTypeScrollView.m; sourceTree = "<group>"; };
 		CE779A971642125300CC7990 /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
 		CE779A9A164226EB00CC7990 /* FunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionViewController.h; sourceTree = "<group>"; };
 		CE779A9B164226EC00CC7990 /* FunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionViewController.m; sourceTree = "<group>"; };
@@ -312,6 +323,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE5044A616537A0C00FBD798 /* navicity */ = {
+			isa = PBXGroup;
+			children = (
+				CE5044A916537A2A00FBD798 /* cityw_daohangt.png */,
+				CE5044AA16537A2A00FBD798 /* cityw_hhk.png */,
+				CE5044AB16537A2A00FBD798 /* cityw_shk.png */,
+				CE5044AC16537A2A00FBD798 /* cityw_title.png */,
+			);
+			name = navicity;
+			sourceTree = "<group>";
+		};
 		CE7B7BA1164A04CE00C33ABE /* OpenFlow */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +412,8 @@
 				CE7A2055164BA04900F991DA /* NewsViewController.m */,
 				CE7EA3031651E9C800E604D7 /* NaviViewController.h */,
 				CE7EA3041651E9C800E604D7 /* NaviViewController.m */,
+				CE5044B216538EE000FBD798 /* CityTypeScrollView.h */,
+				CE5044B316538EE000FBD798 /* CityTypeScrollView.m */,
 				CE7F02EE1650A12700B444A9 /* URLLableDelegate.h */,
 				CE7E08BE16508EDE000AC3B5 /* URLUILabel.h */,
 				CE7E08BF16508EDE000AC3B5 /* URLUILabel.m */,
@@ -413,6 +437,7 @@
 		CE7C0191163F7E73001657B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE5044A616537A0C00FBD798 /* navicity */,
 				CE7F02F01650A28E00B444A9 /* whiteArrow.png */,
 				CE7F02F11650A28E00B444A9 /* whiteArrow@2x.png */,
 				CE7F02F21650A28E00B444A9 /* grayArrow.png */,
@@ -663,6 +688,10 @@
 				CE7F02FE1650A28E00B444A9 /* blueArrow.png in Resources */,
 				CE7F02FF1650A28E00B444A9 /* blueArrow@2x.png in Resources */,
 				CE7F03151650E0EC00B444A9 /* SVWebViewController.bundle in Resources */,
+				CE5044AE16537A2A00FBD798 /* cityw_daohangt.png in Resources */,
+				CE5044AF16537A2A00FBD798 /* cityw_hhk.png in Resources */,
+				CE5044B016537A2A00FBD798 /* cityw_shk.png in Resources */,
+				CE5044B116537A2A00FBD798 /* cityw_title.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +791,7 @@
 				CE7EA3011651E83400E604D7 /* SDZRelationList.m in Sources */,
 				CE7EA3051651E9C800E604D7 /* NaviViewController.m in Sources */,
 				CE7EA3081652216C00E604D7 /* SoapDict.m in Sources */,
+				CE5044B416538EE100FBD798 /* CityTypeScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

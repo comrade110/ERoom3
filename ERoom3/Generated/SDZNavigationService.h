@@ -43,7 +43,7 @@
 	- (SoapRequest*) findSingleContentDetails: (id <SoapDelegate>) handler sessionId: (NSString*) sessionId contTypeId: (NSString*) contTypeId contId: (NSString*) contId;
 	- (SoapRequest*) findSingleContentDetails: (id) target action: (SEL) action sessionId: (NSString*) sessionId contTypeId: (NSString*) contTypeId contId: (NSString*) contId;
 
-	/* Returns int.  */
+	/* Returns NSNumber.  */
 	- (SoapRequest*) getMoudleIdByModuleEntry: (id <SoapDelegate>) handler sessionId: (NSString*) sessionId moduleEntry: (NSString*) moduleEntry;
 	- (SoapRequest*) getMoudleIdByModuleEntry: (id) target action: (SEL) action sessionId: (NSString*) sessionId moduleEntry: (NSString*) moduleEntry;
 
@@ -51,7 +51,7 @@
 	- (SoapRequest*) findSingleContentRelationContentInfo: (id <SoapDelegate>) handler sessionId: (NSString*) sessionId contTypeId: (NSString*) contTypeId relationId: (NSString*) relationId contId: (NSString*) contId pageNo: (NSString*) pageNo perPageNum: (NSString*) perPageNum;
 	- (SoapRequest*) findSingleContentRelationContentInfo: (id) target action: (SEL) action sessionId: (NSString*) sessionId contTypeId: (NSString*) contTypeId relationId: (NSString*) relationId contId: (NSString*) contId pageNo: (NSString*) pageNo perPageNum: (NSString*) perPageNum;
 
-	/* Returns NSMutableArray*.  */
+	/* Returns SDZContType*.  */
 	- (SoapRequest*) findContTypeAndCatalogGroupAndCatalog: (id <SoapDelegate>) handler sessionId: (NSString*) sessionId moduleId: (NSString*) moduleId;
 	- (SoapRequest*) findContTypeAndCatalogGroupAndCatalog: (id) target action: (SEL) action sessionId: (NSString*) sessionId moduleId: (NSString*) moduleId;
 

@@ -16,6 +16,7 @@
 		
 	@property int _id;
 	@property (retain, nonatomic) NSString* name;
+    @property (retain, nonatomic) NSMutableArray *valueArr;
 
 	+ (SDZContType*) createWithNode: (CXMLNode*) node;
 	- (id) initWithNode: (CXMLNode*) node;

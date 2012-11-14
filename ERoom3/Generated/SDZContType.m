@@ -8,6 +8,7 @@
 @implementation SDZContType
 	@synthesize _id = __id;
 	@synthesize name = _name;
+    @synthesize valueArr = _valueArr;
 
 	- (id) init
 	{
@@ -28,15 +29,31 @@
 	- (id) initWithNode: (CXMLNode*) node {
 		if(self = [super initWithNode: node])
 		{
-            
 			self._id = [[Soap getNodeValue: node withName: @"id"] intValue];
 			self.name = [Soap getNodeValue: node withName: @"name"];
-            
+            self.valueArr = [NSMutableArray array];
             CXMLNode *subnode = [Soap getNode:node withName:@"value"];
-            CXMLNode *subsubnode = [Soap getNode:subnode withName:@"value"];
-            for (CXMLElement *e in [subsubnode children]) {
-                NSLog(@"eeee:%@\n::::",e);
+            for (CXMLNode *ee in [subnode children]) {
+                
+                NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+                NSMutableArray *tempArr = [[NSMutableArray alloc] init];
+                    NSString *fid = [Soap getNodeValue: ee withName:@"id"];
+                    NSString *fname = [Soap getNodeValue: ee withName:@"name"];
+                    NSString *keyname = [NSString stringWithFormat:@"%@|%@",fid,fname];
+                CXMLNode *subee = [Soap getNode:ee withName:@"value"];
+                for (CXMLNode *v in [subee children]) {
+                    NSMutableDictionary *vdic = [[NSMutableDictionary alloc] init];
+                    NSString *zid = [Soap getNodeValue:v withName:@"id"];
+                    NSString *zname = [Soap getNodeValue:v withName:@"name"];
+                    [vdic setObject:zname forKey:zid];
+                    [tempArr addObject:vdic];
+                    
+                }
+                [dic setObject:tempArr forKey:keyname];
+                
+                [self.valueArr addObject:dic];
             }
+            
 		}
 		return self;
 	}

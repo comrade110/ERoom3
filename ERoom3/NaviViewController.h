@@ -10,8 +10,9 @@
 #import "ClientClass.h"
 #import "ERConfiger.h"
 
-@interface NaviViewController : UIViewController{
+@interface NaviViewController : UIViewController<UIScrollViewDelegate>{
 
+    UIScrollView *sv;
 
 }
 @property (nonatomic, strong) NSString *targetID;

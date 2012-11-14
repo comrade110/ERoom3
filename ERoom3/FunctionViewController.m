@@ -207,7 +207,7 @@
             [self.navigationController pushViewController:nvc animated:YES];  
         }else if([checkTarget hasPrefix:@"module"]){
             NaviViewController *navi = [[NaviViewController alloc] init];
-            navi.targetID = [checkTarget substringFromIndex:10];
+            navi.targetID = checkTarget;
             [self.navigationController pushViewController:navi animated:YES];
         }
     }

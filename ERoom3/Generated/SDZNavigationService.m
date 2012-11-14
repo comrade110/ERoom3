@@ -128,7 +128,7 @@
 		return _request;
 	}
 
-	/* Returns int.  */
+	/* Returns NSNumber.  */
 	- (SoapRequest*) getMoudleIdByModuleEntry: (id <SoapDelegate>) handler sessionId: (NSString*) sessionId moduleEntry: (NSString*) moduleEntry
 	{
 		return [self getMoudleIdByModuleEntry: handler action: nil sessionId: sessionId moduleEntry: moduleEntry];
@@ -168,7 +168,7 @@
 		return _request;
 	}
 
-	/* Returns NSMutableDictionary*.  */
+	/* Returns SDZContType*.  */
 	- (SoapRequest*) findContTypeAndCatalogGroupAndCatalog: (id <SoapDelegate>) handler sessionId: (NSString*) sessionId moduleId: (NSString*) moduleId
 	{
 		return [self findContTypeAndCatalogGroupAndCatalog: handler action: nil sessionId: sessionId moduleId: moduleId];
@@ -181,7 +181,7 @@
 		[_params addObject: [[SoapParameter alloc] initWithValue: sessionId forName: @"sessionId"]];
 		[_params addObject: [[SoapParameter alloc] initWithValue: moduleId forName: @"moduleId"]];
 		NSString* _envelope = [Soap createEnvelope: @"findContTypeAndCatalogGroupAndCatalog" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
-		SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"" postData: _envelope deserializeTo: [SDZContType2CatalogGroup2ArrayOfCatalogMapMap alloc]];
+		SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"" postData: _envelope deserializeTo: [SDZContType alloc]];
 		[_request send];
 		return _request;
 	}

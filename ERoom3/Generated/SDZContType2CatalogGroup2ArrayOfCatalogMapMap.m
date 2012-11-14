@@ -18,12 +18,9 @@
 	{
 		if(self = [self init]) {
             
-            
-            NSLog(@"\n\n\n node:%@\n\n\n",node);
-            
 			for(CXMLElement* child in [node children])
 			{
-                NSLog(@"\n\n\n child:%@\n\n\n",child);
+             //   NSLog(@"\n\n\n child:%@\n\n\n",child);
                 
 				SDZContType* value = [[SDZContType createWithNode: child] object];
 				if(value != nil) {

@@ -158,7 +158,7 @@
     [ERConfiger shareERConfiger].configArr = tempArr;
     [ERConfiger shareERConfiger].ip = ip;
     
-    CGRect rect =[[UIScreen mainScreen] bounds];
+    
     
     int btnCount = [tempArr count];
     
@@ -168,7 +168,7 @@
         
         UIButton *menuBtns = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        menuBtns.frame = CGRectMake(rect.size.width-(100*btnCount)+i*100, 10, 85, 85);
+        menuBtns.frame = CGRectMake((1024-(100*btnCount))*0.5+i*100, 10, 85, 85);
 
         
         menuBtns.tag = 10+i;
@@ -177,14 +177,16 @@
 
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@%@",ip,[tempDic objectForKey:@"img"]]];
         NSURL *lighturl = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@%@",ip,[tempDic objectForKey:@"lightImg"]]];
-        
+        UIImage *cached = [[SDImageCache sharedImageCache] imageFromKey:[NSString stringWithFormat:@"menu%d",menuBtns.tag]];
+        if (cached) {
+            [menuBtns setBackgroundImage:cached forState:UIControlStateNormal];
+        }
         SDWebImageManager *manager = [SDWebImageManager sharedManager];
         [manager downloadWithURL:url 
                         delegate:self
                          options:0 
                          success:^(UIImage *image, BOOL cached)
                             {
-             
                                 [menuBtns setBackgroundImage:[UIImage imageWithData:UIImagePNGRepresentation(image)] forState:UIControlStateNormal];
                                 [[SDImageCache sharedImageCache] storeImage:[UIImage imageWithData:UIImagePNGRepresentation(image)] forKey:[NSString stringWithFormat:@"menu%d",menuBtns.tag]];
                             }
@@ -194,7 +196,8 @@
                         delegate:self
                          options:0
                          success:^(UIImage *lightimage, BOOL cached)
-                            { [[SDImageCache sharedImageCache] storeImage:[UIImage imageWithData:UIImagePNGRepresentation(lightimage)] forKey:[NSString stringWithFormat:@"menulight%d",menuBtns.tag]]; }
+                            { 
+                                [[SDImageCache sharedImageCache] storeImage:[UIImage imageWithData:UIImagePNGRepresentation(lightimage)] forKey:[NSString stringWithFormat:@"menulight%d",menuBtns.tag]]; }
                          failure:nil];
         
         [menuBtns setTitle:[tempDic objectForKey:@"desc"] forState:UIControlStateNormal];

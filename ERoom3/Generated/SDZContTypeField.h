@@ -12,13 +12,15 @@
 	BOOL _addressData;
 	int __id;
 	NSString* _name;
+    NSString* _value;
 	BOOL _show;
 	
 }
 		
 	@property BOOL addressData;
-	@property int _id;
-	@property (retain, nonatomic) NSString* name;
+@property int _id;
+@property (retain, nonatomic) NSString* name;
+@property (retain, nonatomic) NSString* value;
 	@property BOOL show;
 
 	+ (SDZContTypeField*) createWithNode: (CXMLNode*) node;

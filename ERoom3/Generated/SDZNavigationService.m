@@ -54,7 +54,7 @@
 	}
 
 		
-	/* Returns long.  */
+	/* Returns NSNumber.  */
 	- (SoapRequest*) countContentInfo: (id <SoapDelegate>) handler sessionId: (NSString*) sessionId contTypeId: (NSString*) contTypeId catalogIds: (NSString*) catalogIds
 	{
 		return [self countContentInfo: handler action: nil sessionId: sessionId contTypeId: contTypeId catalogIds: catalogIds];

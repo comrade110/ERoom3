@@ -75,7 +75,7 @@
 		[view release];
 		
 		
-		[self setState:EGOOPullRefreshNormal];
+		[self setState:EGOOPullRefreshPulling];
 		
     }
 	

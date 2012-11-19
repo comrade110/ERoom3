@@ -9,6 +9,7 @@
 	@synthesize addressData = _addressData;
 	@synthesize _id = __id;
 	@synthesize name = _name;
+    @synthesize value = _value;
 	@synthesize show = _show;
 
 	- (id) init
@@ -30,9 +31,11 @@
 	- (id) initWithNode: (CXMLNode*) node {
 		if(self = [super initWithNode: node])
 		{
+            NSLog(@"%@",node);
 			self.addressData = [[Soap getNodeValue: node withName: @"addressData"] boolValue];
 			self._id = [[Soap getNodeValue: node withName: @"id"] intValue];
 			self.name = [Soap getNodeValue: node withName: @"name"];
+			self.value = [Soap getNodeValue: node withName: @"value"];
 			self.show = [[Soap getNodeValue: node withName: @"show"] boolValue];
 		}
 		return self;

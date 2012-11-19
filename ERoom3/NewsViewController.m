@@ -175,6 +175,7 @@
     descL.frame = CGRectMake(20, 30, 950, descSize.height);
     [cell.contentView addSubview:titleL];
     [cell.contentView addSubview:descL];
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
     return cell;
 }
 

@@ -27,7 +27,7 @@
 				
 @interface SDZNavigationService : SoapService
 		
-	/* Returns long.  */
+	/* Returns NSNumber.  */
 	- (SoapRequest*) countContentInfo: (id <SoapDelegate>) handler sessionId: (NSString*) sessionId contTypeId: (NSString*) contTypeId catalogIds: (NSString*) catalogIds;
 	- (SoapRequest*) countContentInfo: (id) target action: (SEL) action sessionId: (NSString*) sessionId contTypeId: (NSString*) contTypeId catalogIds: (NSString*) catalogIds;
 

@@ -35,7 +35,6 @@
     [super viewDidLoad];
     NSLog(@"%@",self.targetID);
     
-    self.singleViewControlle = [[CItySingleViewController alloc] init];
     self.view.backgroundColor = [UIColor blackColor];
     curPage = 1;
     perpage = [NSString stringWithFormat:@"%d",PER_PAGE_NUM];
@@ -79,7 +78,7 @@
 }
 
 -(void)topBtnClick:(UIButton*)sender{
-    NSLog(@"seltag:%d seltag2:%d",seltag,seltag2);
+ //   NSLog(@"seltag:%d seltag2:%d",seltag,seltag2);
     for (int i =0; i<typecount; i++) {
         for (UIButton *btns in [[self.view viewWithTag:1000+i] subviews]) {
             [btns removeFromSuperview];
@@ -171,7 +170,6 @@
             [unlimitbtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [unlimitbtn setTitleColor:[UIColor orangeColor] forState:UIControlStateSelected];
             unlimitbtn.selected = YES;
-            NSLog(@"unlimitbtn.tag: %d,Booooooo!!!!!!!!!l:%d",unlimitbtn.tag,unlimitbtn.selected?1:2);
             if ([result.valueArr indexOfObject:dic]==0) {
                 
                 seltag = unlimitbtn.tag;
@@ -243,7 +241,6 @@
 -(void)clickBtn:(UIButton*)btn
 {
     if (seltag !=0) {
-        NSLog(@"sdasdsad::::%d",seltag);
         UIButton *bb = (UIButton*)[self.view viewWithTag:seltag];
         bb.selected = !bb.selected;
         
@@ -281,8 +278,8 @@
     }else if (seltag>=UNLIMIT_TAG && seltag2<UNLIMIT_TAG){
         catalogIDs = [NSString stringWithFormat:@"%d",seltag2];
     }
-    NSLog(@"seltag:%d seltag2:%d",seltag,seltag2);
-    NSLog(@"catalog:%@",catalogIDs);
+//    NSLog(@"seltag:%d seltag2:%d",seltag,seltag2);
+//    NSLog(@"catalog:%@",catalogIDs);
     if (![infoRequest cancel]) {
         [infoRequest cancel];
     }
@@ -423,10 +420,11 @@
         }
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@%@",[ERConfiger shareERConfiger].ip,urlstr]];
 
-        [pic setBackgroundImageWithURL:url placeholderImage:[UIImage imageNamed:@"winhoologo.png"]];
+        [pic setImageWithURL:url placeholderImage:[UIImage imageNamed:@"winhoologo.png"]];
         // 图片点击事件
         [pic addTarget:self action:@selector(singleViewShow:) forControlEvents:UIControlEventTouchUpInside];
-        
+        pic.titleLabel.text =content.desc;
+        pic.titleLabel.hidden = YES;
         CGSize size = CGSizeMake(160,85);
         CGSize descSize = [content.name sizeWithFont:[UIFont systemFontOfSize:16] 
                                    constrainedToSize:size 
@@ -474,36 +472,31 @@
 }
 
 
+//  点击单个图片
+
 -(void)singleViewShow:(id)sender{
     
     UIButton *selpic = (UIButton*)sender;
     
-    [[ClientClass shareNavService] findSingleContentDetails:self 
-                                                    action:@selector(findSingleContentDetailsHander:) 
-                                                 sessionId:[ERConfiger shareERConfiger].sessionID 
-                                                contTypeId:conTypeID 
-                                                    contId:[NSString stringWithFormat:@"%d",selpic.tag]
-    ];
+    singleViewControlle = [[CItySingleViewController alloc] init];
     
+    singleViewControlle.img = selpic.imageView.image;
+    
+    singleViewControlle.conID = [NSString stringWithFormat:@"%d",selpic.tag];
+    
+    singleViewControlle.conTypeID = conTypeID;
+    
+    singleViewControlle.descText = selpic.titleLabel.text;
+    
+//    NSLog(@"singleViewControlle.descText:%@",singleViewControlle.descText);
+    
+    [self.depthView presentViewController:self.singleViewControlle inView:self.view];
+    self.navigationController.navigationBarHidden = YES;
+    
+
 
 }
 
--(void)findSingleContentDetailsHander:(id)value{
-    
-    if ([value isKindOfClass:[NSError class]]) {
-        NSLog(@"Error: %@", value);
-        return;
-    }
-    if ([value isKindOfClass:[SoapFault class]]) {
-        NSLog(@"Fault: %@", value);
-        return;
-    }
-    for (SDZContTypeField *d in value) {
-        NSLog(@"!!!!!%@:%@,%d",d.name,d.value,d.show?1:2);
-    }
-    [self.depthView presentViewController:self.singleViewControlle inView:self.view];
-    self.navigationController.navigationBarHidden = YES;
-} 
 
 - (void)dismiss {
     [self.depthView dismissPresentedViewInView:self.view];
@@ -592,7 +585,6 @@
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
 	
 	if (curPage*PER_PAGE_NUM<allPage) {
-        NSLog(@":::::%d*12<%d",curPage,allPage);
         [_refreshHeaderView egoRefreshScrollViewDidEndDragging:tableView];
     }else {
         [_refreshHeaderView setHidden:YES];
@@ -606,7 +598,6 @@
     
 	if (curPage*PER_PAGE_NUM<allPage) {
         
-        NSLog(@"~~~~~%d*12>%d",curPage,allPage);
         [self reloadTableViewDataSource];
     }else {
         [_refreshHeaderView setHidden:YES];

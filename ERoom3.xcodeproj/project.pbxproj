@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3801A7165B6AFC009E7BE2 /* XLCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3801A6165B6AFC009E7BE2 /* XLCycleScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE3801AA165B71F7009E7BE2 /* RelationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3801A9165B71F7009E7BE2 /* RelationTableViewController.m */; };
 		CE5044AE16537A2A00FBD798 /* cityw_daohangt.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5044A916537A2A00FBD798 /* cityw_daohangt.png */; };
 		CE5044AF16537A2A00FBD798 /* cityw_hhk.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5044AA16537A2A00FBD798 /* cityw_hhk.png */; };
 		CE5044B016537A2A00FBD798 /* cityw_shk.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5044AB16537A2A00FBD798 /* cityw_shk.png */; };
@@ -79,6 +81,8 @@
 		CE7C0221163FA96F001657B0 /* ClientClass.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0220163FA96F001657B0 /* ClientClass.m */; };
 		CE7C0225163FAB20001657B0 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7C0224163FAB20001657B0 /* libxml2.dylib */; };
 		CE7C0227163FB59D001657B0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7C0226163FB59D001657B0 /* SystemConfiguration.framework */; };
+		CE7C6EDB165B18C200E53785 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6EDA165B18C200E53785 /* close.png */; };
+		CE7C6EDE165B4E1B00E53785 /* jieshao.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6EDD165B4E1B00E53785 /* jieshao.png */; };
 		CE7DF1111648E5E300B65994 /* sbox_backgroud.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7DF1101648E5E300B65994 /* sbox_backgroud.jpg */; };
 		CE7E08C016508EDE000AC3B5 /* URLUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E08BF16508EDE000AC3B5 /* URLUILabel.m */; };
 		CE7E08C416509342000AC3B5 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7E08C316509342000AC3B5 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -118,6 +122,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE3801A5165B6AFC009E7BE2 /* XLCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCycleScrollView.h; sourceTree = "<group>"; };
+		CE3801A6165B6AFC009E7BE2 /* XLCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCycleScrollView.m; sourceTree = "<group>"; };
+		CE3801A8165B71F7009E7BE2 /* RelationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelationTableViewController.h; sourceTree = "<group>"; };
+		CE3801A9165B71F7009E7BE2 /* RelationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelationTableViewController.m; sourceTree = "<group>"; };
 		CE5044A916537A2A00FBD798 /* cityw_daohangt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cityw_daohangt.png; sourceTree = "<group>"; };
 		CE5044AA16537A2A00FBD798 /* cityw_hhk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cityw_hhk.png; sourceTree = "<group>"; };
 		CE5044AB16537A2A00FBD798 /* cityw_shk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cityw_shk.png; sourceTree = "<group>"; };
@@ -248,6 +256,8 @@
 		CE7C0222163FAB02001657B0 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		CE7C0224163FAB20001657B0 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		CE7C0226163FB59D001657B0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE7C6EDA165B18C200E53785 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		CE7C6EDD165B4E1B00E53785 /* jieshao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jieshao.png; sourceTree = "<group>"; };
 		CE7DF1101648E5E300B65994 /* sbox_backgroud.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sbox_backgroud.jpg; sourceTree = "<group>"; };
 		CE7E08BE16508EDE000AC3B5 /* URLUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLUILabel.h; sourceTree = "<group>"; };
 		CE7E08BF16508EDE000AC3B5 /* URLUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLUILabel.m; sourceTree = "<group>"; };
@@ -332,6 +342,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE3801A3165B6AF2009E7BE2 /* CycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				CE3801A5165B6AFC009E7BE2 /* XLCycleScrollView.h */,
+				CE3801A6165B6AFC009E7BE2 /* XLCycleScrollView.m */,
+			);
+			name = CycleScrollView;
+			sourceTree = "<group>";
+		};
 		CE5044A616537A0C00FBD798 /* navicity */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +415,7 @@
 		CE7C017D163F7DF0001657B0 /* ERoom3 */ = {
 			isa = PBXGroup;
 			children = (
+				CE3801A3165B6AF2009E7BE2 /* CycleScrollView */,
 				CE7B7BA1164A04CE00C33ABE /* OpenFlow */,
 				CE7C01F2163FA69E001657B0 /* TouchXML */,
 				CE7C01C9163FA692001657B0 /* Soap */,
@@ -427,6 +447,8 @@
 				CE80610B165A2AB4006F23A4 /* JFDepthView.m */,
 				CE806111165A2CA2006F23A4 /* CItySingleViewController.h */,
 				CE806112165A2CA2006F23A4 /* CItySingleViewController.m */,
+				CE3801A8165B71F7009E7BE2 /* RelationTableViewController.h */,
+				CE3801A9165B71F7009E7BE2 /* RelationTableViewController.m */,
 				CE7F02EE1650A12700B444A9 /* URLLableDelegate.h */,
 				CE7E08BE16508EDE000AC3B5 /* URLUILabel.h */,
 				CE7E08BF16508EDE000AC3B5 /* URLUILabel.m */,
@@ -450,6 +472,8 @@
 		CE7C0191163F7E73001657B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE7C6EDD165B4E1B00E53785 /* jieshao.png */,
+				CE7C6EDA165B18C200E53785 /* close.png */,
 				CE5044A616537A0C00FBD798 /* navicity */,
 				CE7F02F01650A28E00B444A9 /* whiteArrow.png */,
 				CE7F02F11650A28E00B444A9 /* whiteArrow@2x.png */,
@@ -705,6 +729,8 @@
 				CE5044AF16537A2A00FBD798 /* cityw_hhk.png in Resources */,
 				CE5044B016537A2A00FBD798 /* cityw_shk.png in Resources */,
 				CE5044B116537A2A00FBD798 /* cityw_title.png in Resources */,
+				CE7C6EDB165B18C200E53785 /* close.png in Resources */,
+				CE7C6EDE165B4E1B00E53785 /* jieshao.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,6 +832,8 @@
 				CE7EA3081652216C00E604D7 /* SoapDict.m in Sources */,
 				CE80610C165A2AB4006F23A4 /* JFDepthView.m in Sources */,
 				CE806113165A2CA2006F23A4 /* CItySingleViewController.m in Sources */,
+				CE3801A7165B6AFC009E7BE2 /* XLCycleScrollView.m in Sources */,
+				CE3801AA165B71F7009E7BE2 /* RelationTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

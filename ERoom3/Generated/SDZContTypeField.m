@@ -31,7 +31,6 @@
 	- (id) initWithNode: (CXMLNode*) node {
 		if(self = [super initWithNode: node])
 		{
-            NSLog(@"%@",node);
 			self.addressData = [[Soap getNodeValue: node withName: @"addressData"] boolValue];
 			self._id = [[Soap getNodeValue: node withName: @"id"] intValue];
 			self.name = [Soap getNodeValue: node withName: @"name"];

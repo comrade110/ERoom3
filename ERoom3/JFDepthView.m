@@ -28,7 +28,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #define kAnimationDuration  0.5
-#define kPresentedViewWidth 600
+#define kPresentedViewWidth 900
 #define kDefaultBlurAmount  0.2f
 
 @interface UIImage (Blur)
@@ -250,21 +250,22 @@
     self.presentedView.frame = newTopViewFrame;
     
     self.view.frame = bottomViewFrame;
+    NSLog(@"bottomViewFrame.size.width:%f",bottomViewFrame.size.width);
     self.view.backgroundColor = [UIColor blackColor];
     
-    preTopViewWrapperFrame = CGRectMake((bottomViewFrame.size.width / 2) - 300,
+    preTopViewWrapperFrame = CGRectMake((bottomViewFrame.size.width - kPresentedViewWidth)/ 2,
                                         bottomViewFrame.size.height + bottomViewFrame.origin.y,
                                         kPresentedViewWidth,
                                         bottomViewFrame.size.height - 100);
     
-    postTopViewWrapperFrame = CGRectMake((bottomViewFrame.size.width / 2) - 300,
+    postTopViewWrapperFrame = CGRectMake((bottomViewFrame.size.width - kPresentedViewWidth)/ 2,
                                          100,
                                          kPresentedViewWidth,
                                          bottomViewFrame.size.height - 100);
     
     preBottomViewFrame = bottomViewFrame;
     
-    postBottomViewFrame = CGRectMake(50,
+    postBottomViewFrame = CGRectMake((bottomViewFrame.size.width - kPresentedViewWidth)/ 2,
                                      0,
                                      bottomViewFrame.size.width - 100,
                                      bottomViewFrame.size.height - 100);

@@ -9,47 +9,61 @@
 #import "RelationTableViewController.h"
 #import <SDwebImage/UIButton+WebCache.h>
 
-#define RELATION_ROW_NUM 3
+#define RELATION_ROW_NUM 2
 
 @implementation RelationTableViewController
 
-@synthesize conID,conTypeID,relationID,rlist,tbName;
+@synthesize conID,conTypeID,relationID,rlist,tbName,tableView;
 
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
         // Custom initialization
     }
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    NSLog(@"zmhuishi???????????????");
+    
+    tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    tableView.backgroundColor= [UIColor orangeColor];
+    tableView.frame = CGRectMake(0, 0, 600, 600);
 
-    [[ClientClass shareNavService] findSingleContentRelationContentInfo:self 
-                                                                 action:@selector(findRelationInfoHandler:) 
-                                                              sessionId:[ERConfiger shareERConfiger].sessionID 
-                                                             contTypeId:conTypeID 
-                                                             relationId:relationID
-                                                                 contId:conID 
-                                                                 pageNo:@"1" 
-                                                             perPageNum:@"12"];
+    NSLog(@"conTypeID:%@,relationID:%@,conID:%@",[ERConfiger shareERConfiger].conTypeID,[ERConfiger shareERConfiger].relationID,[ERConfiger shareERConfiger].conID);
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+         NSLog(@"sdsdsdsd))");
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+
+
+
+    
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+
+
+}
+
 
 -(void)findRelationInfoHandler:(id)value{
+    
+    NSLog(@")))))))");
     if ([value isKindOfClass:[NSError class]]) {
         NSLog(@"Error: %@", value);
         return;
@@ -58,14 +72,18 @@
         NSLog(@"Fault: %@", value);
         return;
     }
-    list = (SDZContentList *)value;
-    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 600, 600) style:UITableViewStylePlain];
+    list = [[NSMutableArray alloc] init];
+    SDZContentList *result = (SDZContentList *)value;
     
-    tableview.delegate = self;
-    tableview.dataSource = self;
-    NSLog(@"屌屌屌屌屌屌");
-    self.tableView = tableview;
-    [tableview reloadData];
+    for (SDZContent *content in result) {
+        
+        [list addObject:content];
+        
+        NSLog(@"一点都不屌%@",content.name);
+    }
+    
+    [self.view addSubview:tableView];
+//    [tableView reloadData];
     
 }
 
@@ -76,12 +94,19 @@
     // e.g. self.myOutlet = nil;
 }
 
+
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
 }
 
 #pragma mark - Table view data source
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 150.0;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -92,8 +117,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if (list) {
-        return [list count];
+    if (list !=nil) {
+        int row = ([list count]+RELATION_ROW_NUM-1)/RELATION_ROW_NUM;
+        NSLog(@"row:%d",row);
+        return row;
     }else {
         return 0;
     }
@@ -116,6 +143,7 @@
         } 
     } 
     if (list==nil) {
+        
         return cell;
     }
     int rowcount =([list count]-indexPath.row*RELATION_ROW_NUM)/RELATION_ROW_NUM;
@@ -124,9 +152,13 @@
     }else {
         rowcount =[list count]-indexPath.row*RELATION_ROW_NUM;
     }
+    NSLog(@"rowcount:%d",rowcount);
     for (int i=0; i<rowcount; i++) {
-        SDZContent *content = [list objectAtIndex:indexPath.row*3+i];
-        UIView *singleView = [[UIView alloc] initWithFrame:CGRectMake(i*320+30, 10, 320, 120)];
+        SDZContent *content = [list objectAtIndex:indexPath.row*RELATION_ROW_NUM+i];
+        
+        NSLog(@"11111111111");
+        UIView *singleView = [[UIView alloc] initWithFrame:CGRectMake(i*280+30, 10, 280, 120)];
+        
         UIButton *pic = [UIButton buttonWithType:UIButtonTypeCustom];   //  每个内容的大图
 //        [pic.layer setMasksToBounds:YES];
 //        [pic.layer setCornerRadius:5.0];
@@ -145,7 +177,7 @@
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@%@",[ERConfiger shareERConfiger].ip,urlstr]];
         
         [pic setImageWithURL:url placeholderImage:[UIImage imageNamed:@"winhoologo.png"]];
-        // 图片点击事件
+                // 图片点击事件
         [pic addTarget:self action:@selector(singleViewShow:) forControlEvents:UIControlEventTouchUpInside];
         pic.titleLabel.text =content.desc;
         pic.titleLabel.hidden = YES;
@@ -186,6 +218,7 @@
         [singleView addSubview:titleL];
         [singleView addSubview:descL];
         [singleView addSubview:pic];
+        
         [cell.contentView addSubview:singleView];
         
     }

@@ -20,6 +20,7 @@
 }
 
 + (SoapRequest*) create: (SoapHandler*) handler action: (SEL) action urlString: (NSString*) urlString soapAction: (NSString*) soapAction postData: (NSString*) postData deserializeTo: (id) deserializeTo {
+    
 	SoapRequest* request = [[SoapRequest alloc] init];
 	request.url = [NSURL URLWithString: urlString];
 	request.soapAction = soapAction;
@@ -42,7 +43,7 @@
 
 // Sends the request via HTTP.
 - (void) send {
-	
+	NSLog(@"sendsendsend");
 	// If we don't have a handler, create a default one
 	if(handler == nil) {
 		handler = [[SoapHandler alloc] init];

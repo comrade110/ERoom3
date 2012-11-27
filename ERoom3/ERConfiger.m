@@ -11,6 +11,7 @@
 @implementation ERConfiger
 
 @synthesize sessionID,imgURLArr,lightimgURLArr,configArr,ip;
+@synthesize conTypeID,relationID,conID;
 
 static ERConfiger *erConfiger = nil;
 

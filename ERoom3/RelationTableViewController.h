@@ -11,11 +11,12 @@
 #import "ClientClass.h"
 #import "ERConfiger.h"
 
-@interface RelationTableViewController : UITableViewController{
+@interface RelationTableViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
 
-    SDZContentList *list;
+    NSMutableArray *list;
     
-    UITableView *tableview;
+    UITableView *tableView;
+    
 
 
 }
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) NSString *conTypeID;
 @property (nonatomic, strong) NSString *relationID;
 @property (nonatomic, strong) NSString *tbName;
+@property (nonatomic, strong) UITableView *tableView;
 
 
 @end

@@ -13,6 +13,7 @@
 #import "NewsViewController.h"
 #import "SVModalWebViewController.h"
 #import "NaviViewController.h"
+#import "TravelViewController.h"
 
 #define FUNCIMG_WIDTH  150
 #define FUNCIMG_HEIGHT 200
@@ -202,13 +203,15 @@
     }else if (selType == 3) {
         NSString *checkTarget = [[funcIcons objectAtIndex:(btn.tag-1)] objectForKey:@"target"];
         if ([checkTarget hasPrefix:@"news"]) {
-            
             NewsViewController *nvc = [[NewsViewController alloc] initWithNewsSeq:seqcount andBtntag:btn.tag-1];
             [self.navigationController pushViewController:nvc animated:YES];  
         }else if([checkTarget hasPrefix:@"module"]){
             NaviViewController *navi = [[NaviViewController alloc] init];
             navi.targetID = checkTarget;
             [self.navigationController pushViewController:navi animated:YES];
+        }else if([checkTarget isEqualToString:@"travel"]){
+            TravelViewController *travel = [[TravelViewController alloc] init];
+            [self.navigationController pushViewController:travel animated:YES];
         }
     }
 }

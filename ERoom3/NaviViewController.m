@@ -423,7 +423,7 @@
         [pic setImageWithURL:url placeholderImage:[UIImage imageNamed:@"winhoologo.png"]];
         // 图片点击事件
         [pic addTarget:self action:@selector(singleViewShow:) forControlEvents:UIControlEventTouchUpInside];
-        pic.titleLabel.text =content.desc;
+        pic.titleLabel.text =[NSString stringWithFormat:@"%@|%@",content.name,content.desc];
         pic.titleLabel.hidden = YES;
         CGSize size = CGSizeMake(160,85);
         CGSize descSize = [content.name sizeWithFont:[UIFont systemFontOfSize:16] 
@@ -482,11 +482,15 @@
     
     singleViewControlle.img = selpic.imageView.image;
     
+    NSArray *d = [selpic.titleLabel.text componentsSeparatedByString:@"|"];
+    
+    singleViewControlle.title = [d objectAtIndex:0];
+    
     singleViewControlle.conID = [NSString stringWithFormat:@"%d",selpic.tag];
     
     singleViewControlle.conTypeID = conTypeID;
     
-    singleViewControlle.descText = selpic.titleLabel.text;
+    singleViewControlle.descText = [d objectAtIndex:1];
     
 //    NSLog(@"singleViewControlle.descText:%@",singleViewControlle.descText);
     

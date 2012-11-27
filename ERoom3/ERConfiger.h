@@ -15,6 +15,9 @@
 @property(nonatomic,retain) NSMutableArray *lightimgURLArr;
 @property(nonatomic,retain) NSArray *configArr;
 @property(nonatomic,retain) NSString *ip;
+@property(nonatomic,retain) NSString *conTypeID;
+@property(nonatomic,retain) NSString *relationID;
+@property(nonatomic,retain) NSString *conID;
 
 +(ERConfiger*)shareERConfiger;
 

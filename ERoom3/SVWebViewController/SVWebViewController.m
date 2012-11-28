@@ -99,13 +99,13 @@
                         otherButtonTitles:nil]; 
 
         if((self.availableActions & SVWebViewControllerAvailableActionsCopyLink) == SVWebViewControllerAvailableActionsCopyLink)
-            [pageActionSheet addButtonWithTitle:NSLocalizedString(@"Copy Link", @"")];
+            [pageActionSheet addButtonWithTitle:NSLocalizedString(@"复制链接", @"")];
         
         if((self.availableActions & SVWebViewControllerAvailableActionsOpenInSafari) == SVWebViewControllerAvailableActionsOpenInSafari)
-            [pageActionSheet addButtonWithTitle:NSLocalizedString(@"Open in Safari", @"")];
+            [pageActionSheet addButtonWithTitle:NSLocalizedString(@"用默认浏览器打开", @"")];
         
         if([MFMailComposeViewController canSendMail] && (self.availableActions & SVWebViewControllerAvailableActionsMailLink) == SVWebViewControllerAvailableActionsMailLink)
-            [pageActionSheet addButtonWithTitle:NSLocalizedString(@"Mail Link to this Page", @"")];
+            [pageActionSheet addButtonWithTitle:NSLocalizedString(@"发送邮件", @"")];
         
         [pageActionSheet addButtonWithTitle:NSLocalizedString(@"Cancel", @"")];
         pageActionSheet.cancelButtonIndex = [self.pageActionSheet numberOfButtons]-1;
@@ -340,15 +340,15 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
 	NSString *title = [actionSheet buttonTitleAtIndex:buttonIndex];
     
-	if([title isEqualToString:NSLocalizedString(@"Open in Safari", @"")])
+	if([title isEqualToString:NSLocalizedString(@"用默认浏览器打开", @"")])
         [[UIApplication sharedApplication] openURL:self.mainWebView.request.URL];
     
-    if([title isEqualToString:NSLocalizedString(@"Copy Link", @"")]) {
+    if([title isEqualToString:NSLocalizedString(@"复制链接", @"")]) {
         UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
         pasteboard.string = self.mainWebView.request.URL.absoluteString;
     }
     
-    else if([title isEqualToString:NSLocalizedString(@"Mail Link to this Page", @"")]) {
+    else if([title isEqualToString:NSLocalizedString(@"发送邮件", @"")]) {
         
 		MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
         

@@ -43,7 +43,6 @@
 
 // Sends the request via HTTP.
 - (void) send {
-	NSLog(@"sendsendsend");
 	// If we don't have a handler, create a default one
 	if(handler == nil) {
 		handler = [[SoapHandler alloc] init];

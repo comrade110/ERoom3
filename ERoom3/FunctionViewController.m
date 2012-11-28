@@ -14,6 +14,7 @@
 #import "SVModalWebViewController.h"
 #import "NaviViewController.h"
 #import "TravelViewController.h"
+#import "EverydayNewestViewController.h"
 
 #define FUNCIMG_WIDTH  150
 #define FUNCIMG_HEIGHT 200
@@ -212,6 +213,9 @@
         }else if([checkTarget isEqualToString:@"travel"]){
             TravelViewController *travel = [[TravelViewController alloc] init];
             [self.navigationController pushViewController:travel animated:YES];
+        }else if([checkTarget isEqualToString:@"everydayrecommend"]){
+            EverydayNewestViewController *eve = [[EverydayNewestViewController alloc] init];
+            [self.navigationController pushViewController:eve animated:YES];
         }
     }
 }

@@ -7,25 +7,29 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFNetworking.h"
 #import "SVWebViewController.h"
+#import "KGTouchXMLRequestOperation.h"
+#import "EGORefreshTableHeaderView.h"
 
-@interface TravelViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
+@interface TravelViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,EGORefreshTableHeaderDelegate,UIScrollViewDelegate>{
 
 
-    UIPopoverController *cityPop;
-
-    UIButton *citybtn;
-    
-    NSArray *cityName;
-    
-    NSArray *cityCode;
-    
-    NSMutableArray *tuniuData;
-    
-    NSDictionary *cityDic;
-    
-    UITableView *tbView;
-    
+    UIPopoverController           *cityPop;
+    UIButton                      *citybtn;
+    NSString                      *curCity;
+    NSNumber                      *curPage;
+    NSNumber                      *perPage;
+    int                           selTag;
+    UIButton                      *curLable;
+    NSArray                       *cityName;
+    NSArray                       *cityCode;
+    NSMutableArray                *tuniuData;
+    NSDictionary                  *cityDic;
+    KGTouchXMLRequestOperation    *operation;
+    UITableView                   *tbView;
+    EGORefreshTableHeaderView     *_refreshHeaderView;
+	BOOL                          _reloading;
 }
 
 @end

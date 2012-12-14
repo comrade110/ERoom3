@@ -24,6 +24,15 @@
 		CE5B037A165F553400B1B4A5 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B0371165F553400B1B4A5 /* UIImageView+AFNetworking.m */; };
 		CE5B0382165F5A1B00B1B4A5 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE5B037F165F5A1A00B1B4A5 /* citydict.plist */; };
 		CE5B0383165F5A1B00B1B4A5 /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5B0381165F5A1B00B1B4A5 /* CityListViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE6D4AAE16757E250064B2AC /* MealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D4AAD16757E250064B2AC /* MealViewController.m */; };
+		CE6D4AC1167588950064B2AC /* SDZHotelGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D4AB2167588950064B2AC /* SDZHotelGoods.m */; };
+		CE6D4AC2167588950064B2AC /* SDZHotelGoodsCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D4AB4167588950064B2AC /* SDZHotelGoodsCatalog.m */; };
+		CE6D4AC3167588950064B2AC /* SDZHotelGoodsCatalogList.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D4AB6167588950064B2AC /* SDZHotelGoodsCatalogList.m */; };
+		CE6D4AC4167588950064B2AC /* SDZHotelGoodsList.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D4AB8167588950064B2AC /* SDZHotelGoodsList.m */; };
+		CE6D4AC5167588950064B2AC /* SDZHotelTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D4ABA167588950064B2AC /* SDZHotelTicket.m */; };
+		CE6D4AC6167588950064B2AC /* SDZHotelTicketDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D4ABC167588950064B2AC /* SDZHotelTicketDetail.m */; };
+		CE6D4AC7167588950064B2AC /* SDZHotelTicketDetailList.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D4ABE167588950064B2AC /* SDZHotelTicketDetailList.m */; };
+		CE6D4AC8167588950064B2AC /* SDZUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6D4AC0167588950064B2AC /* SDZUserService.m */; };
 		CE779A9C164226EC00CC7990 /* FunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE779A9B164226EC00CC7990 /* FunctionViewController.m */; };
 		CE78A0E6165DFC8B00296668 /* bg_media_library_topbar.png in Resources */ = {isa = PBXBuildFile; fileRef = CE78A0E5165DFC8B00296668 /* bg_media_library_topbar.png */; };
 		CE7A2056164BA04900F991DA /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2055164BA04900F991DA /* NewsViewController.m */; };
@@ -31,6 +40,19 @@
 		CE7A520F1640C57900FF406B /* SOAPXMlParse.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A520E1640C57900FF406B /* SOAPXMlParse.m */; };
 		CE7A524A1640FA9600FF406B /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A52491640FA9600FF406B /* SDWebImage.framework */; };
 		CE7A524C1640FB6700FF406B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A524B1640FB6700FF406B /* ImageIO.framework */; };
+		CE7A98841670463F00C89FDC /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01F4163FA69E001657B0 /* CTidy.m */; };
+		CE7A98851670463F00C89FDC /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01F6163FA69E001657B0 /* CXHTMLDocument.m */; };
+		CE7A98861670463F00C89FDC /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01F8163FA69E001657B0 /* CXMLDocument.m */; };
+		CE7A98871670463F00C89FDC /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01FA163FA69E001657B0 /* CXMLDocument_CreationExtensions.m */; };
+		CE7A98881670463F00C89FDC /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01FC163FA69E001657B0 /* CXMLDocument_PrivateExtensions.m */; };
+		CE7A98891670463F00C89FDC /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01FE163FA69E001657B0 /* CXMLElement.m */; };
+		CE7A988A1670463F00C89FDC /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0200163FA69E001657B0 /* CXMLElement_CreationExtensions.m */; };
+		CE7A988B1670463F00C89FDC /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0202163FA69E001657B0 /* CXMLElement_ElementTreeExtensions.m */; };
+		CE7A988C1670463F00C89FDC /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0204163FA69E001657B0 /* CXMLNamespaceNode.m */; };
+		CE7A988D1670463F00C89FDC /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0206163FA69E001657B0 /* CXMLNode.m */; };
+		CE7A988E1670463F00C89FDC /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0208163FA69E001657B0 /* CXMLNode_CreationExtensions.m */; };
+		CE7A988F1670463F00C89FDC /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C020A163FA69E001657B0 /* CXMLNode_PrivateExtensions.m */; };
+		CE7A98901670463F00C89FDC /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C020C163FA69E001657B0 /* CXMLNode_XPathExtensions.m */; };
 		CE7B7BAF164A067200C33ABE /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7B7BAE164A067200C33ABE /* PageViewController.m */; };
 		CE7B7BB1164A0C8F00C33ABE /* winhoologo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7B7BB0164A0C8F00C33ABE /* winhoologo.png */; };
 		CE7B7BB9164A24DA00C33ABE /* AFItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7B7BB3164A24DA00C33ABE /* AFItemView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -71,19 +93,6 @@
 		CE7C01EF163FA692001657B0 /* SoapReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01E0163FA692001657B0 /* SoapReachability.m */; };
 		CE7C01F0163FA692001657B0 /* SoapRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01E2163FA692001657B0 /* SoapRequest.m */; };
 		CE7C01F1163FA692001657B0 /* SoapService.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01E4163FA692001657B0 /* SoapService.m */; };
-		CE7C020E163FA69E001657B0 /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01F4163FA69E001657B0 /* CTidy.m */; };
-		CE7C020F163FA69E001657B0 /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01F6163FA69E001657B0 /* CXHTMLDocument.m */; };
-		CE7C0210163FA69E001657B0 /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01F8163FA69E001657B0 /* CXMLDocument.m */; };
-		CE7C0211163FA69E001657B0 /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01FA163FA69E001657B0 /* CXMLDocument_CreationExtensions.m */; };
-		CE7C0212163FA69E001657B0 /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01FC163FA69E001657B0 /* CXMLDocument_PrivateExtensions.m */; };
-		CE7C0213163FA69E001657B0 /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C01FE163FA69E001657B0 /* CXMLElement.m */; };
-		CE7C0214163FA69E001657B0 /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0200163FA69E001657B0 /* CXMLElement_CreationExtensions.m */; };
-		CE7C0215163FA69E001657B0 /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0202163FA69E001657B0 /* CXMLElement_ElementTreeExtensions.m */; };
-		CE7C0216163FA69E001657B0 /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0204163FA69E001657B0 /* CXMLNamespaceNode.m */; };
-		CE7C0217163FA69E001657B0 /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0206163FA69E001657B0 /* CXMLNode.m */; };
-		CE7C0218163FA69E001657B0 /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0208163FA69E001657B0 /* CXMLNode_CreationExtensions.m */; };
-		CE7C0219163FA69E001657B0 /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C020A163FA69E001657B0 /* CXMLNode_PrivateExtensions.m */; };
-		CE7C021A163FA69E001657B0 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C020C163FA69E001657B0 /* CXMLNode_XPathExtensions.m */; };
 		CE7C0221163FA96F001657B0 /* ClientClass.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7C0220163FA96F001657B0 /* ClientClass.m */; };
 		CE7C0225163FAB20001657B0 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7C0224163FAB20001657B0 /* libxml2.dylib */; };
 		CE7C0227163FB59D001657B0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7C0226163FB59D001657B0 /* SystemConfiguration.framework */; };
@@ -164,6 +173,24 @@
 		CE5B037F165F5A1A00B1B4A5 /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
 		CE5B0380165F5A1B00B1B4A5 /* CityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityListViewController.h; sourceTree = "<group>"; };
 		CE5B0381165F5A1B00B1B4A5 /* CityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityListViewController.m; sourceTree = "<group>"; };
+		CE6D4AAC16757E250064B2AC /* MealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealViewController.h; sourceTree = "<group>"; };
+		CE6D4AAD16757E250064B2AC /* MealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealViewController.m; sourceTree = "<group>"; };
+		CE6D4AB1167588950064B2AC /* SDZHotelGoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZHotelGoods.h; sourceTree = "<group>"; };
+		CE6D4AB2167588950064B2AC /* SDZHotelGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZHotelGoods.m; sourceTree = "<group>"; };
+		CE6D4AB3167588950064B2AC /* SDZHotelGoodsCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZHotelGoodsCatalog.h; sourceTree = "<group>"; };
+		CE6D4AB4167588950064B2AC /* SDZHotelGoodsCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZHotelGoodsCatalog.m; sourceTree = "<group>"; };
+		CE6D4AB5167588950064B2AC /* SDZHotelGoodsCatalogList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZHotelGoodsCatalogList.h; sourceTree = "<group>"; };
+		CE6D4AB6167588950064B2AC /* SDZHotelGoodsCatalogList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZHotelGoodsCatalogList.m; sourceTree = "<group>"; };
+		CE6D4AB7167588950064B2AC /* SDZHotelGoodsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZHotelGoodsList.h; sourceTree = "<group>"; };
+		CE6D4AB8167588950064B2AC /* SDZHotelGoodsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZHotelGoodsList.m; sourceTree = "<group>"; };
+		CE6D4AB9167588950064B2AC /* SDZHotelTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZHotelTicket.h; sourceTree = "<group>"; };
+		CE6D4ABA167588950064B2AC /* SDZHotelTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZHotelTicket.m; sourceTree = "<group>"; };
+		CE6D4ABB167588950064B2AC /* SDZHotelTicketDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZHotelTicketDetail.h; sourceTree = "<group>"; };
+		CE6D4ABC167588950064B2AC /* SDZHotelTicketDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZHotelTicketDetail.m; sourceTree = "<group>"; };
+		CE6D4ABD167588950064B2AC /* SDZHotelTicketDetailList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZHotelTicketDetailList.h; sourceTree = "<group>"; };
+		CE6D4ABE167588950064B2AC /* SDZHotelTicketDetailList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZHotelTicketDetailList.m; sourceTree = "<group>"; };
+		CE6D4ABF167588950064B2AC /* SDZUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDZUserService.h; sourceTree = "<group>"; };
+		CE6D4AC0167588950064B2AC /* SDZUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDZUserService.m; sourceTree = "<group>"; };
 		CE779A9A164226EB00CC7990 /* FunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionViewController.h; sourceTree = "<group>"; };
 		CE779A9B164226EC00CC7990 /* FunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionViewController.m; sourceTree = "<group>"; };
 		CE78A0E5165DFC8B00296668 /* bg_media_library_topbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_media_library_topbar.png; sourceTree = "<group>"; };
@@ -175,6 +202,8 @@
 		CE7A520E1640C57900FF406B /* SOAPXMlParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAPXMlParse.m; sourceTree = "<group>"; };
 		CE7A52491640FA9600FF406B /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		CE7A524B1640FB6700FF406B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		CE7A983216703A2F00C89FDC /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
+		CE7A983416703A3B00C89FDC /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = usr/lib/libz.1.dylib; sourceTree = SDKROOT; };
 		CE7B7BAD164A067200C33ABE /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		CE7B7BAE164A067200C33ABE /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		CE7B7BB0164A0C8F00C33ABE /* winhoologo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winhoologo.png; sourceTree = "<group>"; };
@@ -282,7 +311,6 @@
 		CE7C020D163FA69E001657B0 /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
 		CE7C021F163FA96F001657B0 /* ClientClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientClass.h; sourceTree = "<group>"; };
 		CE7C0220163FA96F001657B0 /* ClientClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientClass.m; sourceTree = "<group>"; };
-		CE7C0222163FAB02001657B0 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		CE7C0224163FAB20001657B0 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		CE7C0226163FB59D001657B0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE7C2A4116649D2600D104D3 /* KGTouchXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGTouchXMLRequestOperation.h; sourceTree = "<group>"; };
@@ -429,6 +457,29 @@
 			name = AFNetworking;
 			sourceTree = "<group>";
 		};
+		CE6D4AB01675870E0064B2AC /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				CE6D4AB1167588950064B2AC /* SDZHotelGoods.h */,
+				CE6D4AB2167588950064B2AC /* SDZHotelGoods.m */,
+				CE6D4AB3167588950064B2AC /* SDZHotelGoodsCatalog.h */,
+				CE6D4AB4167588950064B2AC /* SDZHotelGoodsCatalog.m */,
+				CE6D4AB5167588950064B2AC /* SDZHotelGoodsCatalogList.h */,
+				CE6D4AB6167588950064B2AC /* SDZHotelGoodsCatalogList.m */,
+				CE6D4AB7167588950064B2AC /* SDZHotelGoodsList.h */,
+				CE6D4AB8167588950064B2AC /* SDZHotelGoodsList.m */,
+				CE6D4AB9167588950064B2AC /* SDZHotelTicket.h */,
+				CE6D4ABA167588950064B2AC /* SDZHotelTicket.m */,
+				CE6D4ABB167588950064B2AC /* SDZHotelTicketDetail.h */,
+				CE6D4ABC167588950064B2AC /* SDZHotelTicketDetail.m */,
+				CE6D4ABD167588950064B2AC /* SDZHotelTicketDetailList.h */,
+				CE6D4ABE167588950064B2AC /* SDZHotelTicketDetailList.m */,
+				CE6D4ABF167588950064B2AC /* SDZUserService.h */,
+				CE6D4AC0167588950064B2AC /* SDZUserService.m */,
+			);
+			name = UserService;
+			sourceTree = "<group>";
+		};
 		CE7B7BA1164A04CE00C33ABE /* OpenFlow */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +497,8 @@
 		CE7C0168163F7DF0001657B0 = {
 			isa = PBXGroup;
 			children = (
+				CE7A983416703A3B00C89FDC /* libz.1.dylib */,
+				CE7A983216703A2F00C89FDC /* libbz2.dylib */,
 				CE7E59AA1665F89B0017EDD1 /* MediaPlayer.framework */,
 				CE80610F165A2AE5006F23A4 /* Accelerate.framework */,
 				CE80610D165A2ADE006F23A4 /* CoreImage.framework */,
@@ -455,7 +508,6 @@
 				CE7A52491640FA9600FF406B /* SDWebImage.framework */,
 				CE7C0226163FB59D001657B0 /* SystemConfiguration.framework */,
 				CE7C0224163FAB20001657B0 /* libxml2.dylib */,
-				CE7C0222163FAB02001657B0 /* libxml2.2.dylib */,
 				CE7C017D163F7DF0001657B0 /* ERoom3 */,
 				CE7C0176163F7DF0001657B0 /* Frameworks */,
 				CE7C0174163F7DF0001657B0 /* Products */,
@@ -525,6 +577,8 @@
 				CE3801A9165B71F7009E7BE2 /* RelationTableViewController.m */,
 				CE7E59A41665E7B50017EDD1 /* EverydayNewestViewController.h */,
 				CE7E59A51665E7B50017EDD1 /* EverydayNewestViewController.m */,
+				CE6D4AAC16757E250064B2AC /* MealViewController.h */,
+				CE6D4AAD16757E250064B2AC /* MealViewController.m */,
 				CE7F02EE1650A12700B444A9 /* URLLableDelegate.h */,
 				CE7E08BE16508EDE000AC3B5 /* URLUILabel.h */,
 				CE7E08BF16508EDE000AC3B5 /* URLUILabel.m */,
@@ -571,6 +625,7 @@
 		CE7C01A1163FA653001657B0 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				CE6D4AB01675870E0064B2AC /* UserService */,
 				CE7EA2D01651E63A00E604D7 /* NavigationService */,
 				CE7EA2CE1651E5D400E604D7 /* FunctionService */,
 			);
@@ -828,6 +883,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7A98841670463F00C89FDC /* CTidy.m in Sources */,
+				CE7A98851670463F00C89FDC /* CXHTMLDocument.m in Sources */,
+				CE7A98861670463F00C89FDC /* CXMLDocument.m in Sources */,
+				CE7A98871670463F00C89FDC /* CXMLDocument_CreationExtensions.m in Sources */,
+				CE7A98881670463F00C89FDC /* CXMLDocument_PrivateExtensions.m in Sources */,
+				CE7A98891670463F00C89FDC /* CXMLElement.m in Sources */,
+				CE7A988A1670463F00C89FDC /* CXMLElement_CreationExtensions.m in Sources */,
+				CE7A988B1670463F00C89FDC /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				CE7A988C1670463F00C89FDC /* CXMLNamespaceNode.m in Sources */,
+				CE7A988D1670463F00C89FDC /* CXMLNode.m in Sources */,
+				CE7A988E1670463F00C89FDC /* CXMLNode_CreationExtensions.m in Sources */,
+				CE7A988F1670463F00C89FDC /* CXMLNode_PrivateExtensions.m in Sources */,
+				CE7A98901670463F00C89FDC /* CXMLNode_XPathExtensions.m in Sources */,
 				CE7C0184163F7DF0001657B0 /* main.m in Sources */,
 				CE7C0188163F7DF0001657B0 /* AppDelegate.m in Sources */,
 				CE7C0190163F7E65001657B0 /* ERTabBarController.m in Sources */,
@@ -858,19 +926,6 @@
 				CE7C01EF163FA692001657B0 /* SoapReachability.m in Sources */,
 				CE7C01F0163FA692001657B0 /* SoapRequest.m in Sources */,
 				CE7C01F1163FA692001657B0 /* SoapService.m in Sources */,
-				CE7C020E163FA69E001657B0 /* CTidy.m in Sources */,
-				CE7C020F163FA69E001657B0 /* CXHTMLDocument.m in Sources */,
-				CE7C0210163FA69E001657B0 /* CXMLDocument.m in Sources */,
-				CE7C0211163FA69E001657B0 /* CXMLDocument_CreationExtensions.m in Sources */,
-				CE7C0212163FA69E001657B0 /* CXMLDocument_PrivateExtensions.m in Sources */,
-				CE7C0213163FA69E001657B0 /* CXMLElement.m in Sources */,
-				CE7C0214163FA69E001657B0 /* CXMLElement_CreationExtensions.m in Sources */,
-				CE7C0215163FA69E001657B0 /* CXMLElement_ElementTreeExtensions.m in Sources */,
-				CE7C0216163FA69E001657B0 /* CXMLNamespaceNode.m in Sources */,
-				CE7C0217163FA69E001657B0 /* CXMLNode.m in Sources */,
-				CE7C0218163FA69E001657B0 /* CXMLNode_CreationExtensions.m in Sources */,
-				CE7C0219163FA69E001657B0 /* CXMLNode_PrivateExtensions.m in Sources */,
-				CE7C021A163FA69E001657B0 /* CXMLNode_XPathExtensions.m in Sources */,
 				CE7C0221163FA96F001657B0 /* ClientClass.m in Sources */,
 				CE7A520B1640BCF900FF406B /* ERConfiger.m in Sources */,
 				CE7A520F1640C57900FF406B /* SOAPXMlParse.m in Sources */,
@@ -918,6 +973,15 @@
 				CE5B0383165F5A1B00B1B4A5 /* CityListViewController.m in Sources */,
 				CE7C2A4316649D2600D104D3 /* KGTouchXMLRequestOperation.m in Sources */,
 				CE7E59A61665E7B60017EDD1 /* EverydayNewestViewController.m in Sources */,
+				CE6D4AAE16757E250064B2AC /* MealViewController.m in Sources */,
+				CE6D4AC1167588950064B2AC /* SDZHotelGoods.m in Sources */,
+				CE6D4AC2167588950064B2AC /* SDZHotelGoodsCatalog.m in Sources */,
+				CE6D4AC3167588950064B2AC /* SDZHotelGoodsCatalogList.m in Sources */,
+				CE6D4AC4167588950064B2AC /* SDZHotelGoodsList.m in Sources */,
+				CE6D4AC5167588950064B2AC /* SDZHotelTicket.m in Sources */,
+				CE6D4AC6167588950064B2AC /* SDZHotelTicketDetail.m in Sources */,
+				CE6D4AC7167588950064B2AC /* SDZHotelTicketDetailList.m in Sources */,
+				CE6D4AC8167588950064B2AC /* SDZUserService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,12 +1056,22 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ERoom3/ERoom3-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SRCROOT)/External",
+				);
 				INFOPLIST_FILE = "ERoom3/ERoom3-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External/MediaLibraryKit\"",
+					"\"$(SRCROOT)/External/MobileVLCKit\"",
+					"\"$(SRCROOT)/../../../../Documents/VLC/MobileVLC/External\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1012,12 +1086,22 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ERoom3/ERoom3-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SRCROOT)/External",
+				);
 				INFOPLIST_FILE = "ERoom3/ERoom3-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External/MediaLibraryKit\"",
+					"\"$(SRCROOT)/External/MobileVLCKit\"",
+					"\"$(SRCROOT)/../../../../Documents/VLC/MobileVLC/External\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SDZFunctionService.h"
 #import "SDZNavigationService.h"
+#import "SDZUserService.h"
 
 
 
@@ -18,4 +19,5 @@
 
 +(SDZFunctionService *)sharedService;
 +(SDZNavigationService *)shareNavService;
++(SDZUserService *)shareUserService;
 @end

@@ -20,5 +20,4 @@
 @property(nonatomic,retain) NSString *conID;
 
 +(ERConfiger*)shareERConfiger;
-
 @end

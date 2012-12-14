@@ -16,8 +16,6 @@
     NSMutableArray *list;
     
     UITableView *tableView;
-    
-
 
 }
 

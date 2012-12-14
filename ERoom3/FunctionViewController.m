@@ -15,6 +15,7 @@
 #import "NaviViewController.h"
 #import "TravelViewController.h"
 #import "EverydayNewestViewController.h"
+#import "MealViewController.h"
 
 #define FUNCIMG_WIDTH  150
 #define FUNCIMG_HEIGHT 200
@@ -216,6 +217,9 @@
         }else if([checkTarget isEqualToString:@"everydayrecommend"]){
             EverydayNewestViewController *eve = [[EverydayNewestViewController alloc] init];
             [self.navigationController pushViewController:eve animated:YES];
+        }else if([checkTarget isEqualToString:@"foods"]){
+            MealViewController *meal = [[MealViewController alloc] init];
+            [self.navigationController pushViewController:meal animated:YES];
         }
     }
 }

@@ -121,9 +121,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (list) {
-        SDZEverydayNewest *newlist =[list objectAtIndex:indexPath.row];
+        SDZEverydayNewest *newest =[list objectAtIndex:indexPath.row];
         
-        NSString *urlStr = [NSString stringWithFormat:@"http://nov8rixstorage.blob.core.windows.net/searchpad/tutorial_portrait.mov"];
+        NSString *urlStr = [NSString stringWithFormat:@"http://%@%@",[ERConfiger shareERConfiger].ip,newest.videoRef];
         NSLog(@"%@",urlStr);
         NSURL *url = [NSURL URLWithString:urlStr];
         

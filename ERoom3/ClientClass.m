@@ -14,6 +14,7 @@
 
 static SDZFunctionService *server = nil;
 static SDZNavigationService *navServer = nil;
+static SDZUserService *userServer = nil;
 
 +(SDZFunctionService *)sharedService{
     
@@ -32,6 +33,15 @@ static SDZNavigationService *navServer = nil;
         }
     }
     return navServer;
+}
++(SDZUserService *)shareUserService{
+    
+    @synchronized(self){
+        if (userServer == nil) {
+            userServer = [SDZUserService service];
+        }
+    }
+    return userServer;
 }
 
 
